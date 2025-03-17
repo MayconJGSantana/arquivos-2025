@@ -1,1 +1,32 @@
+  O que é banco de dados?
 
+- Propostas:
+    Lista
+    Conjunto de dados relacionados
+    Armazenamento de dados
+    Coleção de dados organizados
+    Conjunto de informações
+
+Exemplo:
+
+1.
+
+  Observando o site da LATAM Airlines (https://www.latamairlines.com/), estamos em busca de uma passagem, para isso, ele utiliza 
+
+  1. Procuramos nosso voo em um conjunto de dados armazenados -> Origem, destino, avaliação, hospedagens, data, valores
+
+  O armazenamento de dados facilita a padronização de informações de entrada de um usuário, gerando um registro de compras, por exemplo, garantindo que sejam guardados o valor, escolha do acento e dia de partida.
+
+2.
+
+  Na Amazon (https://www.amazon.com.br/), com objetivo de vender produtos, são divididos os elementos em categorias, constando um banco de dados de itens disponíveis.
+
+  Quando buscamos algum itens que estamos procurando, por exemplo, o item !$@#*&¨% dá como resultado da aba de pesquisa as vendas que mais se assemelham com o que buscamos. Além disso, aparecem as avaliações, a quantidade de compras, outras sugestões de produtos relacionados.
+
+  O algoritmo da aplicação, se tiveres com uma conta logada, salvará suas pesquisas e sempre te mostrar produtos parecidos. Exemplificadamente, para compra precisas fazer o login a fim de salvar os dados de preço, cartão utilizada e localização. Ou seja, o login é importante para garantir a segurança e o conhecimento de quem compra
+
+3.
+
+  Já no Google Maps (https://www.google.com.br/), nos é dado várias localizações detidas em um banco de geolocalização. Se quiseres, podes ir para onde pensas, ao passo que tens alguma localização, mas lembre-se que é dado como saída (resultado) os possíveis locais que queres ir.
+
+  Outra funcionalidade é a navegação a partir do "Street View", que contém imagens do lugar
