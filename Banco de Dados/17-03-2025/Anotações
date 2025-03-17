@@ -30,3 +30,26 @@ Exemplo:
   Já no Google Maps (https://www.google.com.br/), nos é dado várias localizações detidas em um banco de geolocalização. Se quiseres, podes ir para onde pensas, ao passo que tens alguma localização, mas lembre-se que é dado como saída (resultado) os possíveis locais que queres ir.
 
   Outra funcionalidade é a navegação a partir do "Street View", que contém imagens do lugar
+
+4.
+
+  Tomando, agora, o próprio Google (https://www.google.com.br/) como referência, observamos que é uma aplicação centrada em pesquisa, portanto, retorna links de serviços que podemos estar buscando.
+
+
+  Definições
+
+
+  Dado: registros, fatos brutos coletados que não possuem qualquer significado, contexto ou nexo com a realidade. E, primordialmente, não é sinônimo de informação.
+    Exemplo: 1,70 -> pode ser um valor ou uma altura
+
+  Informação: quando os dados são estruturados, organizados, processados, contextualizados ou interpretados, há a geração de informação.
+    Exemplo: Nome     Altura
+             Teste    1,70
+
+  Conhecimento: as informações são interpretados para determinar conclusões.
+    Exemplo: Nome     Altura
+             Teste    1,70
+            ;
+            Ou seja, Teste tem mais de 1,50 -> Conclusão
+
+  Esses itens estão intrisecamente presentes no nosso dia-a-dia, pois as aplicações possuem sugestões de serviços que podemos escolher, portanto eles usam o conhecimento de informações que posssuem sobre nós para gerar sugestões de serviços do nosso gosto ou totalmente diferente, visto que o objetivo de uma aplicação é manter o usuário na plataforma, ou ainda comprar algum produto.
