@@ -53,3 +53,43 @@ Exemplo:
             Ou seja, Teste tem mais de 1,50 -> Conclusão
 
   Esses itens estão intrisecamente presentes no nosso dia-a-dia, pois as aplicações possuem sugestões de serviços que podemos escolher, portanto eles usam o conhecimento de informações que posssuem sobre nós para gerar sugestões de serviços do nosso gosto ou totalmente diferente, visto que o objetivo de uma aplicação é manter o usuário na plataforma, ou ainda comprar algum produto.
+
+  Manuscritos são métodos utilizados antes da criação de banco de dados, biblioteca são um exemplo disso.
+
+- Sistema de arquivo: uma organização de dados a partir de um filtro - cor, data, nome - utilizando pastas para armazenamento.
+
+- Sistema de vendas: organização de dados - preços, marcas e produtos - a partir de uma tabela.
+
+- Sistema de produção: produtos e data de fabricação separados em tabela.
+
+  Os dois últimos sistemas - vendas e produção -, possuem o nome em comum, portanto há uma redutibilidade de dados, como o nome, ou seja, não há nenhuma relação entre as informações.
+
+  Em suma, o Banco de Dados é a entrada de dados padronizados para formação de uma informação para otimização e simplicidade de serviços. Por exemplo, se alguém quer saber a idade de uma pessoa você pesquisa a idade no banco de dados a data de nascimento.
+
+Exercício
+
+1. Gerar uma relação entre as tabelas
+
+a)
+Teclado    R$200,00   HTI
+RAM 128 Gb R$3.500,00 Razen
+Tablet     R$2.500,00 iPad
+
+b)
+
+Teclado    25/10/2020
+RAM 128 Gb 03/03/2025
+Tablet     15/11/2022
+
+Gerando a relação entre os dois sistemas apresentados, temos a seguinte formação:
+
+Produto    Valor      Marca  Data de fabricação
+
+Teclado    R$200,00   HTI    25/10/2020
+RAM 128 Gb R$3.500,00 Razen  03/03/2025
+Tablet     R$2.500,00 iPad   15/11/2022
+
+Com essa relação, se modificarmos em um sistema, não teremos que modificar em outro também.
+
+
+Por fim, a utilização de banco de dados está centrada no objetivo de usar em sistemas.
