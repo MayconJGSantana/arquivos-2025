@@ -1,0 +1,70 @@
+	Introdução
+
+Entender o que é Web, como voip, voz sobre ip, um serviço para fazer ligação pela internet, ou seja,é um serviço/aplicação da internet.
+
+Saber as principais tecnologias e os passos para desenvolver um site, ou como o professor prefere dizer, uma aplicação.
+
+Alguns exemplos de utensílios que serão utilização para o desenvolvimento desse objetivo é o HTML, CSS e Javascript - escrito em forma não glocante, ou seja, um jeito de programar para não deixar a página ociosa durante a execução de uma estrutura de repetição, por exemplo -, no entanto, os dois primeiros itens não são utilizados para fazer um algoritmo com lógica, e sim na execução de interface e layouts.
+
+Vamos conhecer:
+- Geração de aplicativos
+- Extender a página para utilização nos dispostivos que quiseres
+- Frameworks
+- Arquitetura da web (fundamentos) = Como estruturar as aplicações
+- Colocar um site online
+
+Extensão para tirar a estrutura CSS do site: descobrir com o Gabriel
+
+Para a aprendizagem da matéria Desenvolvimento Web, precisaremos do VSCode e a utilização do Google Chrome.
+
+Adicionamos algumas extensões e configurações que estão listadas no slide. Uma extensão não esperada é para transformar a linguagem do Portuguese (Brazil) Language Pack for Visual --- (Microsoft).
+
+	Conteúdo
+
+Na Web há uma arquitetura simplificada:
+
+- Cliente: um user que utiliza a linguagem, manda entradas. Por exemplo: browsers, linguagens de programação, sites. Todos aqueles que saibam falar a "língua do servidor" se comunica com ele. 
+
+- Servidor: recebe as solicitações, manda a saída
+
+Um exemplo de processo em funcionamento, é na área de redes do inspecionar, que mostra todas as entradas, uso da rede. Para otimizar o carregamento dos sites, se eles forem recorrentemente abertos, eles guardam no cache as requisições - solicitações - de recursos - serviços.
+
+Arquitetura web: serviço de solicitação-resposta.
+
+	História da internet
+	
+No período da Guerra Fria, a Corrida Armamentista e Espacial ascendeu, gerando programas como o Plano Marshall - Dar dinheiro para países Europeus, com juros, para levantá-los e obter o apoio deles. Dessa maneira, foram desenvolvidas tecnologias, por exemplo, armas nucleares, o Sputnik - bola de aço que serve de roteador do sinal, mandada pela URSS - e a Defense Advanced Research Projects Agency.
+
+Os Estados Unidos lançaram a Darpa para telefonia e a ARPANET (1969) similar a internet.
+
+Outra ferramenta que foram lançada é o GPT 3, produzida pela ONG OpenAI, Filipe Deschamps abordou sobre o assunto e o patrocínio da ONG pela Microsoft.
+
+O protocolo usado pela Arpanet é o Network Control Protocol (NCP). Com o tempo, foram melhoradas e o Robert Khan e Vint Cerf criaram os protocolos IP e TCP foram criados para melhorar o funcionamento. Uma das metodologias foi a criação de pixels.
+
+HTTP: outro protocolo utilizado pelos navegadores, acompanhado do HTTPS - criptografa as requisições - e DNS da camada de aplicação, pela qual iremos nos aprofundar.
+
+TCP: divide documentos em "blocos". Outro companheiro da camada de Transporte é o UDP, que é utilizado para streamings, vídeos e aúdios.
+
+Pixels: cada "bloco" da imagem é enviado para um IP de origem e de destino, assim, caso alguma parte tenha algum obstáculo no caminho não é perdido tudo, se algum "bloco" for pedido, uma solicitação de reenvio é mandada. No fim, as partes são juntadas.
+
+IP: camada de internet para envio de solicitações. O ICMP é presente também na camada de redes.
+
+Rede: manda para o servidor, que faz o mesmo seguimento de camada, ou seja, rede -> internet -> transporte -> aplicação
+
+Tim Berners, um cientista, e Robert Cailliau propõe o World Wide Web para liberar.
+
+Em suma, a arquitetura cliente-servidor é simplificada, mas por trás da cortina tem diversas outra funcionalidades.
+
+O comando "curl", quando utilizado no terminal, com a estrutura:
+
+curl <url do site>
+
+Dá como saída a renderização da página, mas em terminal.
+
+Uma opção para ser utilizada com o "curl" é:
+
+- "-v": mostra todo o processo para adquirir a renderização. Desde pegar o IP pelo DNS até receber o estado do site - offline ou online - e linguagem - obtida pelo idioma do navegador.
+
+Curiosidade: script de Python que baixa músicas.
+
+Com o aprimoramento da tecnologia vieram dois companheiros do HTMl, o CSS - formador do fenótipo - e o Javascript - formador dos músculos.
