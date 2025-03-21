@@ -1,7 +1,47 @@
-  * HTML
+  * HTML revisão
 
   A tag:
-      <a> /* Aqui fica a parte semântica do link */</a>
+  <a href=" <link> "> /* Aqui fica a parte semântica da tag */</a>
     
-    É utilizada como âncora, em ligação com outro site web.
-  
+  É utilizada como âncora, em ligação com outro site web. E ela pode receber uma classe ou mais classes:
+
+  <a class=""> Corpo sangue que não medo </a>
+
+	* Continuação
+
+
+	Todo documento HTML necessariamente pŕecisa de tags como:
+
+
+		<!DOCTYPE html>
+		
+		<html lang="pt-br"> <!-- a classe é a língua do site, no caso é o português -->
+		
+			<head>
+		
+				<!-- metadados ficam aqui, ou seja -->
+		
+			</head>
+		
+			<body>
+		
+				<!-- no metadados aqui -->
+		
+			</body>
+		
+		</head>
+
+
+	Algumas tags importante:
+
+
+		<p> <br/> <hr/> </p> <!-- "<hr/" não termina a linha, o "<br/>" quebra a linha -->
+
+
+	A validação do código pode ser feita utilizando o site https://validator.w3.org/nu/#textarea
+	
+
+	* CSS
+
+	Além de ser o visual do site, precisa-se
+	
