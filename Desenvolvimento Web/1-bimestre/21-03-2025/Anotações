@@ -25,7 +25,7 @@
 		
 			<body>
 		
-				<!-- no metadados aqui -->
+				<!-- conteúdos aqui -->
 		
 			</body>
 		
@@ -38,10 +38,22 @@
 		<p> <br/> <hr/> </p> <!-- "<hr/" não termina a linha, o "<br/>" quebra a linha -->
 
 
-	A validação do código pode ser feita utilizando o site https://validator.w3.org/nu/#textarea
+	A validação do código pode ser feita utilizando o site https://validator.w3.org/nu/#textarea.
+
+	Atalhos: o VSCode tem código pré prontos para usarmos:
+
+		* ! + enter -> tags necessárias do html
+		* crtl + space -> auto completar
+		* crtl + shift + i -> formata o código
 	
 
 	* CSS
 
-	Além de ser o visual do site, precisa-se
-	
+	Além de ser a estética do site, precisa-se criar a parte auditiva, para que funcionalidades de acessibilidade possam ser usadas.
+
+	Para pular linhas de uma aplicação, pode-se usar a tag <br></br>, mas o css deveria fazer essa função, só que para iniciantes a tag serve bem.
+
+	Funcionalidades:
+		* Responsividade: acessar conteúdos em diversos dispositivos, mas tem que programar para cada intervalo de resolução
+		* Layout
+		* Design
