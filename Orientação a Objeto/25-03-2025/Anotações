@@ -7,3 +7,5 @@
   - Características:
     Entrada | Parâmetro | Argumento
     Retorno | Resultado
+
+  O professor aconselha a colocar as funções no início do código, e o programa principal, no final.
