@@ -1,0 +1,33 @@
+  * SGBD Relacional
+
+  Desvantagens:
+    - Se precisar cadastrar outras informações, precisa ser feito um a um
+    - As modificações das tabelas de vinda dos dados, por exemplo, apagar um comprador, precisa ser apagado também a parte dos pedidos
+
+
+  * SGBD Não Relacional
+
+  Definição:
+    Não usa tabelas, trantando os dados com suportes exclusivos.
+
+  Vantagens:
+    - Simplicidade
+    - Diversidade
+    - Não padronizada: pode criar qualquer formato
+
+  Desvantagens:
+    - Sem ligação
+
+  Exemplos:
+    Usa-se arestas e setas para linkar os dados. Sem a utilização de relações, tornam-se os dados totalmente independentes
+
+
+  * SGBD Hierárquico
+
+  Definição:
+    Relação pai e filho
+
+  Desvantagens:
+    - Estrutura complexa de mudança
+
+  
