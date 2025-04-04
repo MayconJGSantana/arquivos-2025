@@ -1,0 +1,64 @@
+  * CSS
+
+  Quando colocamos uma tag no <style></style>, todos os elementos serão modificados
+
+  Exemplo:
+
+  <style>
+
+
+    body {
+  
+      color: blue;
+  
+      <?-- Todos elementos terão a característica que estiver aqui como hereditariedade; -->
+  
+    }
+
+
+    .classe {
+  
+      font-size: 24;
+      color: red;
+  
+      <?-- Todos os elementos com a classe sucesso ficará com as características que colocamos ;-->
+  
+    }
+
+
+    #identidade <?-- Um código que identifica um elemento, vai ser único o valor --> {
+  
+      color: blue;
+  
+    }
+
+
+    * {
+  
+      margin: 0;
+      padding: 0;
+  
+      <?-- Todos os elementos, não importa o que seja, vai receber essas estilizações. -->
+    }
+
+
+    p strong <?-- A tag negrito --> {
+  
+      color: green;
+  
+      <?-- Vamos estilizar uma tag que está dentro de outra, assim se tiver um strong dentro de um <p></p> vai ficar verde. -->
+    }
+
+
+  </style>
+
+
+<p id=identidade class="classe">
+
+  Vários testes complexos
+
+  <strong>Estilizo</strong>
+
+</p>
+
+  Os títulos definem o assunto principal do nosso site. Se um usuário pesquisar 
