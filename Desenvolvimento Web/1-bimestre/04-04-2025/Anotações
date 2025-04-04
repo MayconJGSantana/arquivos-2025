@@ -61,4 +61,12 @@
 
 </p>
 
-  Os títulos definem o assunto principal do nosso site. Se um usuário pesquisar 
+  Os títulos definem o assunto principal do nosso site. Se um usuário pesquisar no navegador, vai ser mostrado a parte do nosso site que o headline tem o texto escrito da pesquisa.
+
+
+Tag nova:
+  Um menu é feito a partir de listas de links
+
+Curiosidade:
+  - Index é vindo de termo jornalístico, que é considerado como principal e padrão.
+  - Ctrl + / deixa todo o texto que selecionamos no html como comentário.
