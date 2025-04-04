@@ -65,8 +65,19 @@
 
 
 Tag nova:
-  Um menu é feito a partir de listas de links
+  Um menu é feito a partir do CSS de listas de links, ou seja, o item de uma lista pode receber tags, então pode ser uma imagem, link e etc. Elas possuem dois tipos:
+  - Ordenada (<ol></ol>: ela é segregada a partir de uma ordem, que por padrão começa por um, mas usando o atributo start="<!-- Número -->" mudamos por qual número ela começa.
+  - Não ordenada (<ul></ul>): é um conjunto de elementos sem ligação, não possui ordenagem.
+  A manipulação dos itens da lista, as caixas, acabam se encaixando e formando uma harmonia. Todos sites nada mais são do que várias caixas juntas.
+
+Criamos os códigos, mas para colocarmos no ar, criamos um repostitório diferente, colocamos os códigos, vamos em Settings -> Pages -> "None" muda para "main"
+
 
 Curiosidade:
   - Index é vindo de termo jornalístico, que é considerado como principal e padrão.
   - Ctrl + / deixa todo o texto que selecionamos no html como comentário.
+  - O site "Can I Use" (https://caniuse.com/?search=ul) ou o "MDN" (https://developer.mozilla.org/en-US/) são sites utilizados para sabermos quais tags possuem suporte para versões diversas.
+  - Quebra de texto no VSCode -> ir em "Ver" e clicar em "Quebra de Texto", ou apertar Alt + Z.
+  - O Site "Color Hunt" (https://colorhunt.co/) nós dá paletas de cores para deixarmos mais harmônico nosso site.
+  - "Google Fonts" (https://fonts.google.com/) -> Encontramos fontes que desejamos.
+  - "Humilhador de Github" (https://humilhadordegithub.vercel.app/) -> Humilha sua conta com os pontos negativos, a partir de uma IA.
