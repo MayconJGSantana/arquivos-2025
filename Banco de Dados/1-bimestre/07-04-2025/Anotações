@@ -1,0 +1,64 @@
+  * Sistema de Gerenciamento de Banco de Dados - Orientado a Objetos
+
+  SGBD é o software de manipulação de dados com uma interface de comunicação usuário e dados.
+
+  O modelo Orientado a Objetos tem:
+    - Identificação única para acessar informações
+    - Encapsulamento, ou seja, você só acessa a partir de processos específicos indo para a caracterização de:
+        1. Um objeto
+        2. Utilizar seus métodos
+        3. Passar para a funcionalidade.
+
+        Exemplo:
+          1. Tênis.
+          2. Tamanho, cor, categoria.
+          3. Calcular desconto, disponibilidade.
+
+  Além disso, foi criado recentemente.
+
+  Exemplo:
+    ° Se quiser usar uma porta para fazer sua casa, você já tem um objeto que possui especificações pré colocadas.
+    ° Para flechar um ogro são solicitados os métodos, como as funções, para executar.
+
+  Vatagens:
+    - Simplicitade
+
+  Desvantagens:
+    - Complexidade
+    - Custos elevados para produção e manutenção
+    - Sobrecarga
+    - Falta de padrões -> se quiser trocar o software vai precisar mudar muitas funções
+
+
+
+  * SGBD em Memória
+
+  Definição:
+    Armazena os dados em memória RAM, ao invés do disco rígido, utilziado para armazenar dados temporários. Software de 
+
+  Vantagens:
+    - Análises rápidas, mesmo com grandes volumes.
+    - Escalabilidade -> Aproveita a capacidade dos servidores.
+    - 
+
+  Desvantagens:
+    - Maior preço por conta da memória.
+    
+
+  Exemplo de uso.
+    - Rdis
+    - Apache
+
+
+
+  * Tarefa
+
+  Vamos fazer uma história em quadrinhos para apresentar comparação entre o nosso modelo - de rede - e um modelo sorteado.
+
+  Modelo sorteado: relacional
+
+
+
+
+  Curiosidades:
+    - "iLovePDF" (https://www.ilovepdf.com/pt) -> Aplicação para comprimir pdf
