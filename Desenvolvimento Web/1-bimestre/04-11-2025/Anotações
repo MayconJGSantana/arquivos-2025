@@ -1,0 +1,41 @@
+  * Revisão
+
+  O ul faz menu.
+
+
+  * Tags importantes para texto
+
+  - b (vintage) | strong (contemporâneo) -> Parte importante da página
+  - i (vintage) | em     (contemporâneo) -> 
+
+
+
+  * Conteúdo
+
+  Depois de criado o nosso portfólio, o professor trouxe o questionamento: queremos fazer alguma alteração no design - identação, tamanho e cor -, mas como sabemos qual função faz o que?
+
+  Por mais que possamos usar uma imagem para colocar como o CSS da aplicação, ela não terá a capacidade de interação com o usuário - não tem como clicar em botão. Além disso, a responsividade dela seria difícil, nesse viés, temos os modelos de caixa:
+
+  - Estrutura que armazena um conteúdo com margem interna - padding -, e margem com outros elementos - margin.
+
+    ° <style> padding: 10px;
+      <div> terço </div> -> vai ser uma caixa só com uma margem do texto até a margem do bloco de 10 px.
+
+  As margens - margin -, quando elas se encontram, por exemplo dois elementos um do lado do outro tem 50px de margem, mas, na verdade, as margens se sobrepõem.
+
+
+
+  * Elementos
+
+  - Linhas:
+      Não ocupam largura nem altura, só o texto
+      Pode estar nos blocos
+
+  - Bloco:
+      Começa em uma linha abaixo
+      Não pode estar na linha
+
+
+
+  * Curiosidades
+    - lorem*n -> lorem é um texto para uso de testes de <p></p>, por exemplo, dessa forma ele será repetido n vezes
