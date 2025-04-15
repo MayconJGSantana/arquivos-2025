@@ -32,7 +32,7 @@ foreach ($numeros as $numero) {
 
     $somatorio += $numero;
 
-}
+} // A função array_sum(<vetor>) já soma todos os elementos
 
 $media = media($somatorio, count($numeros));
 
