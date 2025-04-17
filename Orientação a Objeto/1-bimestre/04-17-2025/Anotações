@@ -1,0 +1,7 @@
+  * Revisão
+
+  For -> usa condição.
+  Foreach -> usa a quantidade de elementos.
+
+  Array associativo -> escolhemos a chave.
+  Array indexado -> segue uma progressão aritmética.
