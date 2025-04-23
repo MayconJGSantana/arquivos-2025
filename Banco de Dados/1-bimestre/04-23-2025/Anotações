@@ -1,0 +1,23 @@
+  * Construção de banco de dados 
+
+  De primeira mão, precisamos definir o modelo dos dados:
+   - Encontrar quais serão os campos de informações importantes para o sistema.
+
+  Esse tipo de método passa para a escalação de níveis de abstração, para conquista de objetivos:
+
+   * Conceitual: representação, desenho, esboço de quais informações serão armazenadas.
+      | Entidade Relacionamento (ER, MER e DER) -> Cardinalidades - como um objeto trabalha com o outro -, objetos, seus itens e suas interações.
+
+   * Lógico: incluir algumas estruturas mais complexas, criando classes de dados - nome recebe string, e telefone recebe integer.
+      | Modelo Relacional -> usando tabelas.
+
+   * Físico: criar fisicamente toda a estrutura.
+      | SGBDs -> depende no tipo de projeto que queres desenvolver.
+
+  Por fim, utilizamos um SGBD para criação do 
+
+  | Banco de dados de livros:
+     1. Informações importantes -> Categorias dos livros, usuários, acervos, empréstimos, localização do produto, ou seja, cadastrar livros, gerenciar usuários e empréstimos
+     2. Conceitual -> Pessoa (Nome, matrícula, curso, email)   ---- Reserva (Cadastra, devolução, qual livro, quem) -----   Livro (Categoria, localização, disponibilidade, autor, título, classificação etária)
+     3. Lógico -> Estruturação
+     4. Físico -> criação
