@@ -1,0 +1,40 @@
+  * Revisão
+
+
+  Margem Interna (ou preenchimento) + Borda + Conteúdo
+
+  ° 10 + 4 + 200 = Uma caixa com 5 de margem interna e 2 px de borda com um conteúdo de 200 px ocupará 214 pixels no total
+
+
+  Aplicar um padding em todos os lados e depois só modificar os específicos:
+
+  ° padding: 20px
+    padding-left: 10px // Todos os outros serão 20 px menos o padding da esquerda
+
+
+  Elementos de linha (inline) não pode ter alguma elementro, ao contrário dos em blocos.
+
+  ° <p> Teste <strong> negrito </strong> legal <p> -> O <p> é um bloco e o <strong> é o inline
+
+
+  Div separa elementos, como por exemplo, o site do IFPR (https://ifpr.edu.br/) que é separado por layout Santo Graal:
+
+  °  ---------------------------------------------
+     | div header                                |
+     |                                           |
+     |                                           |
+     |-------------------------------------------|
+     | div aside   | div main       | div menu   |
+     |             |                |            |
+     |             |                |            |
+     |             |                |            |
+     |-------------------------------------------|
+     | div footer                                |
+     |                                           |
+     |                                           |
+     ---------------------------------------------
+
+    Por padrão, sempre teremos uma div com a criação na linha de baixo, para ajustar sua criação na linha ao lado, colocamos a flutuação (float)
+
+  Atalhos de comandos:
+   - .bandeira -> <div classe="bandeira"></div>
