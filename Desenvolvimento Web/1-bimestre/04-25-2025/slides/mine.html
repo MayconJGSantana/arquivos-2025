@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>
+
+        Desafio Um
+        
+    </title>
+
+    <style>
+
+        #bandeiras {
+            border: solid 1px #242323;
+            height: 200px;
+            width: 900px;
+            overflow: none;
+            margin: 0 auto; /* auto significa que ele verificará quanto falta para chegar a margem nos cantos e ficar centralizado */
+        }
+
+        .bandeira {
+            border: solid 1px #242323;
+            width: 250px;
+            height: 150px;
+            float: left;
+            margin: 20px;
+        }
+
+        #holanda {
+
+            .linha1 {
+                background-color: red;
+                height: 50px;
+            } /* Itens de classe linha dentro de holanda */
+
+            .linha2 {
+                background-color: white;
+                height: 50px;
+            } /* Itens de classe linha dentro de holanda */
+
+            .linha3 {
+                background-color: blue;
+                height: 50px;
+            } /* Itens de classe linha dentro de holanda */
+
+        } /* Essa estrutura de um dentro do outro é para navegadores de antigamente */
+
+        #alemanha .linha1 {
+
+            background-color: black;
+            height: 50px;
+        
+        } /* Itens de classe linha dentro de holanda */
+
+        #alemanha .linha2 {
+                background-color: red;
+                height: 50px;
+        } /* Itens de classe linha dentro de holanda */
+
+        #alemanha .linha3 {
+            background-color: yellow;
+            height: 50px;
+        } /* Itens de classe linha dentro de holanda */
+
+        
+
+        #italia {
+
+            .coluna {
+                height: 100%;
+                width: calc(100% / 3);
+                float: left;
+
+            }
+
+            .coluna1{
+                background-color: green;
+            }
+
+            .coluna2{
+                background-color: white;
+            }
+
+            .coluna3{
+                background-color: red;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+    
+    <div id="bandeiras">
+
+        <div id="holanda" class="bandeira">
+
+            <div class="linha1">
+
+            </div>
+
+            <div class="linha2">
+
+            </div>
+
+            <div class="linha3">
+                
+            </div>
+
+        </div>
+
+        <div id="alemanha" class="bandeira">
+            <div class="linha1"></div>
+            <div class="linha2"></div>
+            <div class="linha3"></div>
+        </div>
+
+        <div id="italia" class="bandeira">
+            <div class="coluna1 coluna"></div>
+            <div class="coluna2 coluna"></div>
+            <div class="coluna3 coluna"></div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
