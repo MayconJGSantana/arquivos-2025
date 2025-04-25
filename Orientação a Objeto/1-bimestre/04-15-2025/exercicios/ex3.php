@@ -1,33 +1,62 @@
 <?php
 
-$frases = array(
-                "sentido",
-                "Anarcadismo é legal",
-                "Falta de lógica",
-                "Que ironia incrível",
-                "A vida é bela."
-);
+// Foi imposto que as entradas seriam números... Pois é né
 
-$palavras = array(
-                  "sentido",
-                  "maneiro",
-                  "passaram",
-                  "rir",
-                  "sim"
-);
+function entrada() : array {
+
+    $conteiner = array();
+
+    for ($i = 1; $i <= 5; $i++) {
+
+        $numero = (int) readline("Entre com um número: ");
+
+        array_push($conteiner, $numero);
+
+    }
+
+}
+
+function esta_lista(array $lista, $elemento) : bool {
+
+    foreach ($lista as $item) {
+
+        if ($item == $elemento) {
+
+            return true;
+
+        }
+
+    }
+
+    return false:
+
+}
+
+function intersecta(array $vetor_primario, array $vetor_secundario) : array {
+
+    foreach ($vetor_primario as $elemento_um) {
+    
+        if (esta_lista($vetor_secundario, $elemento_um)) {
+
+            // Parei aqui :)
+        }
+    
+    }
+
+}
+
+
+
+// Main program
+
+$conteiner_1 = entrada();
+
+$conteiner_2 = entrada();
 
 $interseccao = array();
 
 $uniao = array();
 
-for ($i = 0; $i < 5; $i++) {
-
-    if ($frases[$i] == $palavras[$i]) {
-
-        array_push ($interseccao, $frases[$i]);
-    }
-
-}
 
 foreach ($frases as $elemento) {
     array_push ($uniao, $elemento);
