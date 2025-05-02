@@ -1,0 +1,117 @@
+  * Revisão
+
+  "Tudo são caixas [div] e elas se encaixam para virar layout"
+                                     - Chaves, Jefferson, 2025
+
+
+
+* CSS (Cascading Style Sheets)
+
+  Trazer estética.
+
+  °  ---------------------------------------------
+     | Esporte     | Fofoca         | Notícias   |
+     |             |                |            |
+     |             |                |            |
+     |             |                |            |
+     ---------------------------------------------
+
+  Para selecionar o CSS de um elemento no <style></style> pode ser especificado usando os atributos:
+
+  [type="black"] {
+
+      color: black
+
+  }
+
+  [href*="ifpr"] { /* Estiliza tudo que contém ifpr no link */
+
+      color-background: black;
+
+  }
+
+  [href*="ifpr"] { /* Estiliza tudo que começa ifpr no link */
+
+      text-align: center;
+
+  }
+
+  div p { /* Estiliza todo p que está dentro de que começa ifpr no link */
+
+      text-align: center;
+
+  }
+
+  .conteudo p { /* Estiliza tudo que começa ifpr no link */
+
+      text-align: center;
+
+  }
+
+  div > p { /* Só estiliza os ps que são filhos diretos */
+
+      text-align: center;
+
+  }
+
+  h1 + p { /* Só estiliza os ps que são irmãos */
+
+      text-align: center;
+
+  }
+
+  °
+
+  <p></p> 
+  <h1></h1> // h1 + p, ou seja, são irmãos
+
+  <p></p>
+  <div></div>
+  <h1></h1> // h1 e p1 não são irmãos
+
+  - A precedência de conteúdos vem por conta da ordem de leitura, o primeiro tem menos precedência que o último;
+
+  °
+    [href*="ifpr"] {                                    | Menor prioridade
+                                                        |
+        color: aqua;                                    |  - As prioridades podem mudar, ou seja, o que vier antes pode ter mais prioridade se a soma de prioridade for maior que a seguinte?
+                                                        |    1. <classe> = 1 ponto
+    }                                                   |    2. .<classe> = 10 pontos
+                                                        |    3. #<id> = 100 pontos
+    h1 + p {                                            |    4. Se depois de alguma característica tiver a função <!important>, ele irá ignorar a pontuação.
+                                                        |
+        color: red;                                     |
+                                                        |
+    }                                                   |
+                                                        |
+    p + h1 {                                            |
+                                                        |
+        color: oldlace;                                 |
+                                                        |
+    }                                                   |
+                                                        |
+    div {                                               |
+                                                        |
+        background-color: darkcyan;                     |
+        height: 200px;                                  |
+        padding: 20px;                                  |
+        padding-top: 200;                               |
+    }                                                   ↓ Maior prioridade
+
+  - PAAMAYIM_NEKUDOTAYIM -> dois pontos em hebraico -> Utilizado para Pseudo Seletores
+
+  - Unidades de medidas:
+    - Absolutas: quando definimos o valor, sempre serão o mesmo
+      ° 500px ou 5cm
+    - Relativas: são calculadas a partir de alguma referẽncia.
+      ° Viewport width (vw), viewport height(vh), o elemento pai - vem como referência na porcentagem -, calc().
+
+
+  - Device-pixel-ratio -> calcula para relacionar a quantidade de pixels na tela e quando vale o pixel no css.
+
+
+
+  * Curiosidades
+
+  - Sites que vem com parte do CSS já pronto -> 0Bootstrap (https://getbootstrap.com/) e o Tailwind (https://tailwindcss.com/plus)
+  - Site para comprar domínios -> GoDaddy (https://www.godaddy.com/pt-br)
