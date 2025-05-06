@@ -1,0 +1,20 @@
+<?php
+
+$n = 5;
+$r = 3;
+$ultimo_numero_sequencia = null;
+$sequencia = array();
+
+for ($i = 1; $i <= 10; $i++) {
+    if ($i == 1) {
+        $ultimo_numero_sequencia = $n;
+        array_push($sequencia, $ultimo_numero_sequencia);
+    }
+    else {
+        $ultimo_numero_sequencia += $r;
+        array_push($sequencia, $ultimo_numero_sequencia);
+    }
+}
+
+print_r($sequencia);
+
