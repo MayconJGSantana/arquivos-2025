@@ -1,0 +1,11 @@
+<?php
+
+$leitura = readline("Escreva o que quiseres"); // como padrão, vai ser string
+$numero = (int) readline("Escreva um número"); // Explicitei para que seja inteiro
+
+echo $leitura;
+echo "\n";
+echo $numero;
+echo "\n";
+
+$soma = $leitura + 5; // Mesmo sendo uma string, contanto que seja um número inteiro, ele consegue fazer uma operação matemática, mas especificando a classe fica mais 100%

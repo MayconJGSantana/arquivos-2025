@@ -1,0 +1,15 @@
+<?php
+
+if (true)
+    echo "funciona";
+
+if (true)
+    echo "não funciona";
+    echo "não funciona";
+    echo "não funciona";
+    echo "não funciona";
+
+if (true) {
+    echo "não funciona";
+    echo "não funciona";
+}
