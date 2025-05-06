@@ -1,0 +1,20 @@
+    * Arrays
+
+    - Associativa: a posição de um elemento é identificada por um item.
+        - Foreach: percorre os elementos da lista.
+
+          foreach ($array as $chave => $elemento) {} // Repete a quantidade de elementos que o array 
+                                                        tem.
+                                                        $elemento recebe o elemento
+                                                        $chave recebe o nome da posição do elemento
+
+
+
+    - Indexada: posição definida por um contagem de 0 à quantidade de itens da lista.
+        - Foreach: percorre os elementos da lista.
+
+          foreach ($array as $elemento) {} // Repete a quantidade de elementos que o array tem
+                                              e a variável $elemento recebe o elemento do arra
+    
+    Comandos:
+        - count($nomeArray) -> Retorna a quantidade de elementos de uma lista
