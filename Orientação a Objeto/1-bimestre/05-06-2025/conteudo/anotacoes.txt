@@ -1,0 +1,38 @@
+  * Programação orientada a objeto
+
+
+  Paradigma para mudar a forma de programar para colocar conceitos reais nos programas.
+
+  - Muito difundido
+  - Suporte de várias línguas
+
+  Mesmo não estando no top 10, o PHP foca no Desenvolvimento Web, por isso aprendemos nessa linguagem.
+
+  Para começar, o programa passa a ser separado por classes, nesse viés, temos como vantagens:
+    - Organização: manutenção e distribuição.
+    - Facilidade: reutilização
+    - Naturalidade: aproximação com o mundo real
+
+  Depois, abstraímos as entidades, ou seja, mapeamos-as, modelando uma classe para esses conceitos a partir de:
+    - Atributos: características.
+    - Métodos: operações.
+  A quantidade de elementos da classe vária de acordo com a abstração, as informações importantes de ser mapeadas.
+
+  --------------------
+  | Nome             |
+  |------------------|
+  | Atributos        |
+  |                  |
+  |------------------|
+  | Métodos          | - Representação de classe:
+  |                  |   UML
+  --------------------
+
+  A estrutura a cima é o padrão da classe.
+
+  O objeto é a instância da classe -> elementos digitais que são criados pelas classes, assim, uma mesma classe pode ter vários objetos
+
+
+
+  * Curiosidades
+  - Top das programações -> Tiobe (https://www.tiobe.com/tiobe-index/)
