@@ -1,0 +1,25 @@
+  * Revisão
+
+  Métodos para criação de classes:
+    1. Abstrair o objeto com informações importantes
+    2. A classe vai conter essas informações a partir de:
+        - Atributos: características
+        - Métodos: operações
+
+        °   ----------------------------
+            | Celular                  |
+            |                          |
+            |--------------------------|
+            | Atributos                |
+            |                          |
+            | Qtd.armazenamento        |
+            | Resolução                |
+            | Cor                      |
+            | Qtd.RAM                  |
+            |--------------------------|
+            | Métodos                  | - Representação de classe:
+            |                          |   UML
+            | Ligar                    |
+            | Tirar.foto               |
+            | Receber.interação        |
+            ----------------------------
