@@ -1,0 +1,28 @@
+  * Revisão
+
+  Unidades de medida no CSS:
+    - Absolutas: não mudam de valor durante o código
+        ° px - r, g, b -, cm, mm, pt
+    - Relativas:
+        ° %, vh - view-height -, vw - view-width -, em, rem
+
+  Esquema de prioridade
+    - Elemento = 1 ponto
+    - Classe = 10 pontos
+    - ID = 100 pontos
+    - !important = infinitos pontos na  propriedade
+
+
+
+  * Conteúdo
+
+  Box-sizing é o tamanho da caixa, que pode ser border-box, ou seja, o tamanho será o a definição pelo height e width, desconsiderando margin e padding como o content-box fazia.
+
+  O float é para ele flutuar.
+
+  O position: absolute; é modificando o relative, pois por padrão são relativos, mas se mudamos quer dizer que não haverá referência de outra caixa.
+    - Relative: vai pegar alguém e tornar relativo.  
+    - Absolute: alinha de acordo com coordenadas, pois o padrão é o body, portanto a caixa que está dentro de outra precisa ser relativa, ou seja, uma referència.
+    - 
+
+  z-index muda as camadas que temos.
