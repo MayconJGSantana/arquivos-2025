@@ -1,0 +1,70 @@
+  * Revisão
+
+  A criação do banco de dados depende dos requisitos/utilização da aplicação -> Análise de requisitos
+    ° Locadora -> cadastro de filmes e clientes, registro de empréstimos
+      ;
+      Escola   -> cadastri de notas, professores
+
+    - Escopo: delimitar o que será feito.
+
+  Tradução dos requisitos em um formato independente do SGBD -> Modelagem Conceitual
+
+  Implementação de processos com as informações, dependendo do SGBD-> Projeto Lógico
+
+  Estruturação específica dos detalhes, totalmente necessitando do SGBD-> Projeto Físico
+
+
+
+  * Modelagem Conceitual
+
+  É utilizado a Entidade de Relacionamento (DER ou ER), separado em:
+  
+    - Entidades: conjunto de objetos do mundo real para guardar sua informação.
+      ° Departamento - Entidade - -> instâncias = Contabilidade, Financeiro.
+
+      
+    - Atributos: informação que queremos guardar de um elemento
+    
+      - Cardinalidade:
+                      Monovalorado: tem um valor.
+                      |
+                      Multivalorado: tem mais de um valor.
+
+      - Simboliza uma chave-primária, ou seja, informação única.
+        |
+        Entidade com chave > Forte
+        Entidade sem chave > Fraca
+    
+      ° Empregado -> Nome, Endereço e salário
+
+    
+    - Relacionamentos: ações que acontecem entre entidades
+    
+      - As vezes podem receber atributos para registrar cada mudança do dado, sendo relativísticos.
+        
+      - Cardinalidades: número de ocorrências de interação
+        |
+          Possibilidades = (1, 1) > obrigatoriamente
+                           ;
+                           (1; N)
+                           ;
+                           (0, N) - Nenhuma relação para uma -
+                           ;
+                           (N, N)
+        |            
+          Mínima = 1 > obrigatoriamente precisam conversar entre si.
+            ° Cliente (1, 1) - tem - (1, N) Conta  ---  Um cliente pode ter várias contas, mas uma conta só tem um cliente.
+        |
+          Máxima = 0 > É opcional conversarem.
+            ° Empregado (1, 1) - gerencia - (0, 1) Departamento  ---  O empregado tem que ter um departamento, mas nem todo departamento tem empregados.
+      
+      - Auto: o objeto relaciona com si mesmo
+        ° Pessoa é casado com pessoa 
+
+      - Quantidade de entradas:
+                               Binária > só uma entidade
+                               |
+                               Ternário > mais de uma entidade
+      
+          
+    
