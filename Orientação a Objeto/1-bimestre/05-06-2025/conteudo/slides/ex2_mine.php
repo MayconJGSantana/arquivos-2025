@@ -6,15 +6,7 @@ class Retangulo {
     public $base;
 
 
-    function __construct ($altura, $base) {
 
-        $this -> altura = $altura;
-    
-        $this -> base = $base;
-
-    }
-
-    
     function area() : float {
 
         $area = $this -> altura * $this -> base;
@@ -38,7 +30,11 @@ for ($i = 1; $i <= 3; $i++) {
     
     $base = readline("Qual o tamanho da base do seu retângulo? ");
 
-    $retangulo = new Retangulo($altura, $base);
+    $retangulo = new Retangulo;
+
+    $retangulo -> altura = $altura;
+
+    $retangulo -> base = $base;
 
     print("A àrea do seu retângulo é: " . $retangulo -> area() . "\n");
 
