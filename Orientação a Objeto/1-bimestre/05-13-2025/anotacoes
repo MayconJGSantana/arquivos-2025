@@ -1,0 +1,6 @@
+  * Conteúdo
+
+  __constructor -> é chamado sempre que uma nova classe é criada.
+    - Inicializador dos atributos da classe quando inicializada.
+    - Não é obrigatório
+
