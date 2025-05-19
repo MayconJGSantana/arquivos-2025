@@ -1,0 +1,10 @@
+  * Entidade-Relacionamento
+
+  Nem sempre construímos modelos errados mesmo não sendo o resultado exato, porque ele pode ser desenhado de várias formas. Previnimos a construção com ligações de informações indesejadas seguindo passos:
+
+  1° Observação das entidades
+  1.1° (Opcional) Definir uma chave pública
+  2. Compilação de informações
+  3. Criação de relacionamentos ---> Não podem ter mais de 2 ligações por conta da complexidade.
+
+https://app.brmodeloweb.com/#!/publicview/682b3fcd994be08099a5f84d
