@@ -1,0 +1,28 @@
+  * Conteúdo
+
+  Encapsulamento
+
+    Pilar da programação orientada a objeto; Organizador e privador de acesso; Protetor dos dados.
+      ° Não precisamos saber o funcionamento de um motor para usar um liquidificador
+
+    Características:
+      - Não permite acesso direto aos dados e métodos da classe
+
+    Metodologia:
+      - Private (-): acesso dentro do escopo ---> Acesso concebido pelo Get, Set ou Construct
+      - Public (+): unicamente dentro do escopo
+
+      public $attribute;
+      private $attribute;
+        public function get<NomeAtributo>() {
+          return $this -> <nomeAtributo>;
+        }
+        ;
+        public function set>NomeAtributo>($<valorAtributo>) {
+          $this -> <nomeAtributo> = $<nomeAtributo>;
+        }
+
+      function metodo() {} // Por padrão vai ser public
+      public function metodo() {}
+      private function metodo() {}
+    
