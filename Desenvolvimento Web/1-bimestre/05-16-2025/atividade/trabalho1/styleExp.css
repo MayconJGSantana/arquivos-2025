@@ -1,0 +1,142 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+header .titulos .titulo h1, h6 {
+
+    font-size: 25px;
+
+}
+
+    .titulos {
+
+        justify-content: center;
+
+        align-items: center;
+
+        display: flex;
+
+        width: 100%;
+        height: 20vh;
+
+    }
+    
+        .titulo {
+
+            width: auto;
+            height: 20%;
+
+        }
+
+
+#cabecalho {
+
+    background-color: rgb(149, 183, 255);
+
+    top: 0;
+
+    left: 0;
+
+    position: fixed;
+
+    min-height: 20vh;
+
+    width: 100vw;
+
+}
+
+main {
+
+    width: 100vw;
+
+    min-height: 70vh;
+
+}
+
+    .container {
+
+        margin-left: 15vw;
+
+        margin-right: 15vw;
+
+        width: 70vw;
+
+    }
+
+footer {
+
+    height: 10vh;
+
+    background-color: antiquewhite;
+
+}
+
+#tabela_experiencias, th, td {
+
+    border-collapse:collapse;
+    padding: 10px;
+    height: auto;
+    text-align: left;
+    border: 1px solid rgb(160 160 160);
+
+}
+
+.seccao {
+
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: solid 1px grey;
+
+}
+
+
+    #botao_seccao {
+        
+        text-align: center;
+
+    }
+
+    #tabelas {
+
+    }
+
+        #tabelas table {
+            
+            margin: 0 auto;
+
+        }
+
+    #figura {
+
+        text-align: center;
+    }
+    
+        #figura img {
+
+            border-radius: 20px;
+
+        }
+
+    #texto {
+
+        text-align: center;
+
+    }
+
+        #texto h1 {
+
+            padding-bottom: 5px;
+        }
+
+    #botao_inicio {
+
+        text-align: center;
+
+        padding-bottom: 10px;
+
+
+    }
