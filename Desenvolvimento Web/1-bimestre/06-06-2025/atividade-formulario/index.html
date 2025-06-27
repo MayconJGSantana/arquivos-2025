@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" 
+    content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/froala-editor@latest/css/froala_editor.pkgd.min.css"
+    rel="stylesheet"
+    type="text/css" />
+
+    <link rel="stylesheet" 
+    href="style.css">
+    
+    <title>
+        
+        Formulário de Exemplo
+    
+    </title>
+
+</head>
+
+<body>
+
+    <form action="/submit"
+    method="POST"
+    onsubmit="return processar_formulario()">
+
+        <h3>
+            
+            Cadastre-se
+        
+        </h3>
+        
+        <div class="form-group">
+
+            
+            <label for="nome">
+                
+                Nome (Obrigatório):
+            
+            </label>
+
+            <input type="text"
+            id="nome"
+            name="nome"
+            placeholder="Nome completo..." required>
+
+            <div id="seta">
+                <div id="estrutura_seta"></div>
+            </div>
+            <div id="avisinho">
+
+                <div id="aba"></div>
+
+                <span id="teste">
+
+                    Teste
+
+                </span>
+
+                <span id="teste2">
+
+                    Teste
+
+                </span>
+            </div>
+            
+        </div>
+
+        <div class="form-group" id="caca">
+                
+            <label for="data_nascimento">
+                
+                Data de Nascimento:
+            
+            </label>
+            
+            <input id="data_nascimento"
+            name="data_nascimento"
+            type="date">
+            
+        </div>
+
+        <div class="form-group">
+
+            <label for="estado_civil">
+                
+                Estado civil:
+            
+            </label>
+            
+            <input id="estado_civil"
+            name="estado_civil"
+            type="radio"> Solteiro(a)
+
+            <input id="estado_civil"
+            name="estado_civil"
+            type="radio"> Casado(a)
+
+
+            <input id="estado_civil"
+            name="estado_civil"
+            type="radio"> Outro
+
+        </div>
+        
+        <div class="form-group">
+
+            <label for="telefone">
+                
+                Telefone:
+            
+            </label>
+            
+            <input id="telefone"
+            name="telefone"
+            type="number">
+            
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="email">
+                
+                Email:
+            
+            </label>
+
+            <input type="email"
+            id="email"
+            name="email">
+
+        </div>
+                <div class="form-group">
+
+            <label for="mercado_trabalho">
+                
+                Experiência em mercado de trabalho:
+            
+            </label>
+            
+            <input id="mercado_trabalho"
+            name="mercado_trabalho"
+            type="radio"> Sim
+
+            <input id="mercado_trabalho"
+            name="mercado_trabalho"
+            type="radio"> Não
+
+        </div>
+
+        <div class="form-group">
+            
+            <label>
+                
+                Habilidades:
+            
+            </label>
+            
+            <label for="html">
+                
+                <input type="checkbox"
+                id="html"
+                name="habilidades"
+                value="HTML">HTML
+
+            </label>
+                
+            <label for="css">
+
+                <input type="checkbox"
+                id="css"
+                name="habilidades"
+                value="CSS">CSS
+            
+            </label>
+
+            <label for="js">
+
+                <input type="checkbox"
+                id="js"
+                name="habilidades"
+                value="JS">JavaScript
+
+            </label>
+
+        </div>
+
+        <div class="form-group">
+
+            <label for="pais">
+                
+                País:
+            
+            </label>
+
+            <select id="pais"
+            name="pais">
+
+                <option value="ar">
+                    
+                    Argentina
+                
+                </option>
+
+                <option value="bo">
+                    
+                    Bolívia
+                
+                </option>
+
+                <option value="br">
+                    
+                    Brasil
+                
+                </option>
+
+                <option value="py">
+                    
+                    Paraguai
+                
+                </option>
+
+                <option value="uy">
+                    
+                    Uruguai
+                
+                </option>
+
+            </select>
+
+        </div>
+
+        <div class="form-group">
+
+            <label for="comentarios">
+                
+                Comentários:
+            
+            </label>
+            
+            <br>
+
+            <textarea id="comentarios"
+            name="comentarios">
+        
+            </textarea>
+
+        </div>
+
+        <div class="form-group">
+
+            <button type="submit">
+                
+                Enviar
+                
+            </button
+
+        </div>
+
+    </form>
+
+    <div id="fundo_aviso">
+
+        <div id="caixa_texto">
+
+            <div id="bottom">
+                
+                <button></button>
+                
+            </div>
+        </div>
+
+    </div>
+
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/froala-editor@latest/js/froala_editor.pkgd.min.js">
+
+    </script>
+
+    <script>
+
+        new FroalaEditor('textarea');
+
+    </script>
+
+    <script src="processa_formulario.js"></script>
+
+</body>
+
+</html>
