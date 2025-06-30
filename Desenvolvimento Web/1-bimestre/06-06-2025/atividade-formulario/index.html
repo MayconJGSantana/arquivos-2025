@@ -50,39 +50,71 @@
             name="nome"
             placeholder="Nome completo..." required>
 
-            <div id="seta">
-                <div id="estrutura_seta"></div>
+            <div class="seta">
+
+                <div class="estrutura_seta"></div>
+
             </div>
-            <div id="avisinho">
 
-                <div id="aba"></div>
+            <div class="aviso">
 
-                <span id="teste">
+                <div class="aba">
 
-                    Teste
+                    <div class="container_texto_aba">
 
-                </span>
+                        <span class="texto_aba"></span>
 
-                <span id="teste2">
+                    </div>
+                </div>
 
-                    Teste
+                <div class="container_corpo_texto">
 
-                </span>
+                        <span class="corpo_texto"></span>
+
+                </div>
+
             </div>
             
         </div>
 
-        <div class="form-group" id="caca">
+        <div class="form-group">
                 
             <label for="data_nascimento">
                 
-                Data de Nascimento:
+                Data de Nascimento (Obrigatório):
             
             </label>
             
             <input id="data_nascimento"
             name="data_nascimento"
-            type="date">
+            type="date"
+            required>
+
+            
+            <div class="seta">
+
+                <div class="estrutura_seta"></div>
+
+            </div>
+
+            <div class="aviso">
+
+                <div class="aba">
+
+                    <div class="container_texto_aba">
+
+                        <span class="texto_aba"></span>
+
+                    </div>
+                </div>
+
+                <div class="container_corpo_texto">
+
+                        <span class="corpo_texto"></span>
+
+                </div>
+
+            </div>
             
         </div>
 
@@ -94,32 +126,50 @@
             
             </label>
             
-            <input id="estado_civil"
-            name="estado_civil"
-            type="radio"> Solteiro(a)
+            <div id="container_estado_civil" class="containers">
 
-            <input id="estado_civil"
-            name="estado_civil"
-            type="radio"> Casado(a)
+                <div class="containers_opcoes">
 
+                    <input id="estado_civil"
+                    name="estado_civil"
+                    type="radio"> Solteiro(a)
 
-            <input id="estado_civil"
-            name="estado_civil"
-            type="radio"> Outro
+                </div>
 
+                <div class="containers_opcoes">
+
+                    <input id="estado_civil"
+                    name="estado_civil"
+                    type="radio"> Casado(a)
+
+                </div>
+                
+                <div class="containers_opcoes">
+
+                    <input id="estado_civil"
+                    name="estado_civil"
+                    type="radio"> Outro
+                    
+                </div>
+
+            </div>
+           
         </div>
         
         <div class="form-group">
 
             <label for="telefone">
                 
-                Telefone:
+                Telefone (Obrigatório):
             
             </label>
             
             <input id="telefone"
-            name="telefone"
-            type="number">
+            name="telefone" 
+            type="tel" 
+            placeholder="(11) 91234-5678" 
+            pattern="\(\d{2}\) \d{5}-\d{4}"
+            required>
             
         </div>
 
@@ -128,67 +178,152 @@
 
             <label for="email">
                 
-                Email:
+                Email (Obrigatório):
             
             </label>
 
             <input type="email"
             id="email"
-            name="email">
+            name="email"
+            placeholder="nome@gmail.com"
+            required>
+
+            
+            <div class="seta">
+
+                <div class="estrutura_seta"></div>
+
+            </div>
+
+            <div class="aviso">
+
+                <div class="aba">
+
+                    <div class="container_texto_aba">
+
+                        <span class="texto_aba"></span>
+
+                    </div>
+                </div>
+
+                <div class="container_corpo_texto">
+
+                        <span class="corpo_texto"></span>
+
+                </div>
+
+            </div>
 
         </div>
-                <div class="form-group">
+
+        <div class="form-group">
 
             <label for="mercado_trabalho">
                 
-                Experiência em mercado de trabalho:
+                Experiência em mercado de trabalho (Obrigatório):
             
             </label>
-            
-            <input id="mercado_trabalho"
-            name="mercado_trabalho"
-            type="radio"> Sim
 
-            <input id="mercado_trabalho"
-            name="mercado_trabalho"
-            type="radio"> Não
+            <div id="container_mercado_trabalho" class="containers">
 
+                <div class="containers_opcoes">
+
+                    <input id="experiente"
+                    name="mercado_trabalho"
+                    type="radio"
+                    required> Sim
+                    
+                </div>
+
+                <div class="containers_opcoes">
+
+                    <input id="novato"
+                    name="mercado_trabalho"
+                    type="radio"> Não
+
+                </div>
+
+            </div>
+        
         </div>
 
         <div class="form-group">
             
             <label>
                 
-                Habilidades:
-            
-            </label>
-            
-            <label for="html">
-                
-                <input type="checkbox"
-                id="html"
-                name="habilidades"
-                value="HTML">HTML
-
-            </label>
-                
-            <label for="css">
-
-                <input type="checkbox"
-                id="css"
-                name="habilidades"
-                value="CSS">CSS
+                Habilidades (Obrigatório):
             
             </label>
 
-            <label for="js">
 
-                <input type="checkbox"
-                id="js"
-                name="habilidades"
-                value="JS">JavaScript
+            <div id="container_habilidades" class="containers">
 
-            </label>
+                <div class="containers_opcoes">
+
+                    <label for="html">
+                        
+                        <input type="checkbox"
+                        id="html"
+                        name="habilidades"
+                        value="HTML">HTML
+
+                    </label>
+
+                </div>
+
+                <div class="containers_opcoes">
+
+                    <label for="css">
+
+                        <input type="checkbox"
+                        id="css"
+                        name="habilidades"
+                        value="CSS">CSS
+                    
+                    </label>
+
+                </div>
+
+                <div class="containers_opcoes">
+
+                    <label for="js">
+
+                        <input type="checkbox"
+                        id="js"
+                        name="habilidades"
+                        value="JS">JavaScript
+
+                    </label>
+
+                </div>
+
+            </div>
+
+            
+            <div class="seta">
+
+                <div class="estrutura_seta"></div>
+
+            </div>
+
+            <div class="aviso">
+
+                <div class="aba">
+
+                    <div class="container_texto_aba">
+
+                        <span class="texto_aba"></span>
+
+                    </div>
+                </div>
+
+                <div class="container_corpo_texto">
+
+                        <span class="corpo_texto"></span>
+
+                </div>
+
+            </div>
 
         </div>
 
@@ -196,12 +331,21 @@
 
             <label for="pais">
                 
-                País:
+                País (Obrigatório):
             
             </label>
 
             <select id="pais"
-            name="pais">
+            name="pais"
+            required>
+    
+                <option value=""
+                disabled
+                selected>
+                    
+                    Escolha um opção...
+                
+                </option>
 
                 <option value="ar">
                     
@@ -256,11 +400,11 @@
 
         <div class="form-group">
 
-            <button type="submit">
+            <button id="enviar" type="submit">
                 
                 Enviar
                 
-            </button
+            </button>
 
         </div>
 
@@ -268,16 +412,25 @@
 
     <div id="fundo_aviso">
 
-        <div id="caixa_texto">
+        <div id="container_texto">
 
-            <div id="bottom">
-                
-                <button></button>
-                
+            <div id="corpo_texto_fundo_aviso">
+
+                <span></span>
+
             </div>
+            
+            <div id="botao_fundo_aviso">
+                    
+                <button onclick="return estado_recebido()"></button>
+                    
+            </div>
+            
         </div>
 
     </div>
+
+
 
     <script type="text/javascript"
     src="https://cdn.jsdelivr.net/npm/froala-editor@latest/js/froala_editor.pkgd.min.js">

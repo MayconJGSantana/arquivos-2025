@@ -26,60 +26,98 @@ h3 {
 
 form {
     width: 500px;
-    height: 100vh;
+
+    /* Foi trocado uma altura determinística para uma altura responsiva, de acordo com os elementos da página  */
+    flex-direction: column;
+    display: flex;
+
     float: right;
     /* desloca o formulário para a direita da página  */
     background-color: #ffffff;
     padding: 25px 50px 25px 50px;
 }
 
-form .form-group {
-    margin-top: 15px;
-}
+    form .form-group {
+        margin-top: 15px;
+    }
 
-/* Cria um estilo para os labels, menos os que tiverem a propriedade "for" com os valores abaixo */
-label:not([for="html"], [for="css"], [for="javascript"], [for="php"]) {
-    display: block;
-    margin-bottom: 8px;
-}
+        /* Cria um estilo para os labels, menos os que tiverem a propriedade "for" com os valores abaixo */
+        label:not([for="html"], [for="css"], [for="javascript"], [for="php"]) {
 
-[for="html"], [for="css"], [for="javascript"], [for="php"] {
-    margin-right: 25px;
-}
+            font-size: 18px;
+            display: block;
+            
+            margin-bottom: 8px;
 
-input[type="text"],
-input[type="date"],
-input[type="email"],
-input[type="file"],
-select,
-textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
+        }
 
-textarea {
-    resize: vertical;
-}
+        [for="html"], [for="css"], [for="javascript"], [for="php"] {
+            
+            margin-right: 25px;
 
-button {
-    width: 100%;
-    padding: 12px;
-    background-color:#e5633f;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
+        }
 
-/* informa que o estilo do botão será alterado quando houver um evento de mouse sobre ele */
-button:hover {
-    background-color: #4285f4;
-}
+        input[type="text"],
+        input[type="date"],
+        input[type="email"],
+        input[type="file"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+            .containers {
+
+                display: flex;
+
+                margin: 15px 0px 5px 0px;
+            
+            }
+
+            #container_estado_civil {
+
+                justify-content: space-between;
+            
+            }
+
+            #container_habilidades {
+
+                justify-content: space-between;
+                
+            }
+
+            #container_mercado_trabalho {
+
+                justify-content: space-around;
+
+            }
+
+        #enviar {
+            width: 100%;
+            padding: 12px;
+            background-color:#e5633f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* informa que o estilo do botão será alterado quando houver um evento de mouse sobre ele */
+        #enviar:hover {
+
+            background-color: #4285f4;
+
+        }
 
 
 #fundo_aviso {
@@ -104,20 +142,24 @@ button:hover {
 
 }
 
-    #fundo_aviso #caixa_texto {
+    #fundo_aviso #container_texto {
 
         height: 27.442371020856201975850713501647vh;
         width: 37.783375314861460957178841309824vw;
 
         position: relative;
 
+        overflow: hidden;
+
         background-color: rgb(174, 167, 167);
         
         border-radius: 20px;
+        
+        padding: 10px;
 
     }
 
-        #fundo_aviso #caixa_texto #bottom {
+        #fundo_aviso #botao_fundo_aviso {
 
             position: absolute;
             
@@ -127,46 +169,57 @@ button:hover {
 
         }
 
-            #fundo_aviso #caixa_texto #bottom button {
+            #fundo_aviso #botao_fundo_aviso button {
 
                 box-shadow: 2px 2px;
 
+                font-size: 16px;
+
             }
 
-#seta {
+            #fundo_aviso #corpo_texto_fundo_aviso span {
 
-    margin-left: 40px;
+                
+                font-size: 20px;
 
-    background-color: antiquewhite;
+                color: white;
+
+            }
+
+.seta {
+
+    margin-left: 20px;
 
     position: relative;
 
-    display: flex;
-
     justify-content: center;
+
+    align-items: center;
 
     overflow: hidden;
 
 }
 
-    #seta #estrutura_seta {
+    .seta .estrutura_seta {
 
-        height: 100px;
+        height: 30px;
 
         position: absolute;
 
 
-        background-color: aquamarine;
+        background-color: rgb(250, 152, 152);
 
         transform: rotate(45deg);
 
     }
 
-#avisinho {
+.aviso {
 
-    height: 300px;
+    min-height: 60px;
 
     background-color: rgb(251, 251, 251);
+
+    display: none;
 
     border-radius: 10px;
 
@@ -174,9 +227,40 @@ button:hover {
 
 }
 
-    #avisinho #aba {
+    .aviso .aba {
 
-        height: 10%;
+        padding: 5px 5px 0px 10px;
+
+        height: 30%;
+
+        display: flex;
 
         background-color: rgb(250, 152, 152);
+
     }
+    
+            .aviso .aba .container_texto_aba .texto_aba {
+
+                font-size: 20px;
+
+                color: white;
+
+                font-weight: bold;
+
+            }
+
+        .aviso .container_corpo_texto {
+
+                padding: 10px
+
+        }
+
+            .aviso .container_corpo_texto .corpo_texto {
+
+                text-align: justify;
+
+                font-size: 16px;
+
+                color: rgb(83, 83, 83); 
+
+            }
