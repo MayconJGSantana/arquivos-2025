@@ -1,0 +1,755 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.site {
+
+    display: flex;
+    flex-direction: column;
+    font-family: "Ubuntu", Arial, Helvetica, sans-serif;
+
+}
+
+.container {
+
+    width: 66.161616vw;
+    margin: 0 auto;
+    height: 100%;
+
+}
+
+
+.col-1 {
+    
+    flex: 1 1 calc(100% / 12);
+
+}
+
+.col-2 {
+    
+    flex: 1 1 calc(100% / 6);
+
+}
+
+.col-3 {
+    
+    flex: 1 1 calc(100% / 4);
+
+}
+
+.col-4 {
+    
+    flex: 1 1 calc(100% / 3);
+
+}
+
+.col-5 {
+    
+    flex: 1 1 calc(100% / 12 * 5);
+
+}
+.col-6 {
+    
+    flex: 1 1 calc(100% / 2);
+
+}
+
+.col-7 {
+    
+    flex: 1 1 calc(100% / 12 * 7);
+
+}
+
+.col-8 {
+    
+    flex: 1 1 calc(100% / 8);
+
+}
+
+.col-9 {
+    
+    flex: 1 1 calc(100% / 12 * 9);
+
+}
+
+.col-10 {
+    
+    flex: 1 1 calc(100% / 12 * 10);
+
+}
+
+.col-11 {
+    
+    flex: 1 1 calc(100% / 12 * 11);
+
+}
+
+.col-12 {
+    
+    flex: 1 1 100%;
+
+}
+
+.cabecalho {
+
+    height: 11.780155vh;
+    background-color: transparent;
+    background-image: linear-gradient(180deg, #fff 0%, #dbdbdb 100%);
+
+}
+    .cabecalho .container {
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+        .cabecalho .logo img {
+
+            width: 165px;
+
+        }
+.menu-cabecalho ul {
+
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+}
+
+.menu-cabecalho i {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 1.515152vw;
+    height: 2.896759vh;
+
+    font-size: 1.158704vh;
+    color: #fff;
+
+    background-color: #9b9b9b;
+    padding: 5px;
+    border-radius: 50%;
+
+    transition: all 0.3s;
+
+}
+
+.menu-cabecalho li:hover i {
+
+    background-color: transparent;
+    color: #9b9b9b;
+
+}
+
+.menu-cabecalho a {
+
+    text-decoration: none;
+
+}
+
+/* Menu principal */
+
+.menu {
+
+    height: 5.359005vh;
+    background-color: transparent;
+    background-image: linear-gradient(180deg, #fff 0%, #e4e4e4 100%);
+
+}
+
+        .menu .container ul {
+
+            height: 100%;
+
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+        }
+
+        .menu a {
+
+            text-decoration: none;
+            color: #003c6a;
+            padding: 1.738056vh;
+            
+        }
+
+        .menu a:hover {
+
+            background-color: #fff;
+
+        }
+
+/* Banner */
+
+.banner {
+    
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+
+}
+    .banner img {
+
+        width: 100vw;
+
+    }
+
+
+/* Notícias competências*/
+
+.noticias-competencias {
+
+    padding: 120px 0px;
+    background-image: linear-gradient(180deg, #00315e 0%, #000825 100%);
+
+}
+
+    .noticias-competencias .titulo {
+
+        color: #fff;
+        font-size: 30px;
+        margin-bottom: 10px;
+
+    }
+
+.noticias {
+
+    display: flex;
+    gap: 20px;
+    
+}
+
+    .noticias .noticia {
+
+        flex: 1 1 25%;
+
+        background-color: #fff;
+        
+        border-radius: 20px;
+        overflow: hidden;
+
+    }
+        .noticia .imagem {
+
+            width: 100%;
+            overflow: hidden;
+
+            position: relative;
+
+        }
+
+        .noticia .imagem:hover img {
+
+            scale: 1.1;
+            transition: all 0.5s ease;
+        
+        }
+
+            .noticia .imagem img {
+
+                width: 100%;
+
+            }
+
+        .noticia .data {
+            width: 100%;
+
+            background-color: #00315EBD;
+            color: #50C4FF;
+            padding: 8px 0;
+            font-style: italic;
+            text-align: center;
+
+            position: absolute;
+            z-index: 1;
+
+            bottom: 0;
+
+
+            transition: all 0.5s ease;
+
+        }
+
+        .noticia .imagem:hover .data {
+
+            bottom: -35px;
+
+        }
+        
+        .noticia .post {
+
+            padding: 20px;
+
+        }
+
+            .noticia .post p {
+
+                font-size: 17px;
+                font-weight: 200;
+                line-height: 22px;
+                color: #003c6a;
+
+            }
+
+        .noticia .botao {
+
+            padding: 20px;
+            display: flex;
+            justify-content: flex-end;
+
+        }
+
+        .noticia .botao a {
+
+            text-decoration: none;
+            font-style: italic;
+            background-color: #ebebeb;
+            color: #0082c4;
+
+            padding: 4px 15px;
+            border-radius: 25px;
+
+        }
+
+        .noticia .botao a:hover {
+
+            background-color: #0082c4;
+            color: #ebebeb;
+
+        }
+
+/* COMPETENCIAS */
+
+.competencias {
+
+    display: flex;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+}
+
+    .competencias .competencia {
+
+        flex: 1 1 32%;
+
+        border-radius: 15px;
+
+        border: solid 1px #4FC4FF60;
+
+        overflow: hidden;
+
+        position: relative;
+
+    }
+    
+        .competencias .competencia img {
+
+            width: 100%;
+
+            height: 100%;
+
+            transition: all ease 0.5s;
+
+
+        }
+
+
+        .competencias .competencia .texto {
+
+            width: 100%;
+
+            height: 100%;
+
+            position: absolute;
+
+            top: 0;
+            padding-top: 175px;
+
+            display: flex;
+
+            justify-content: center;
+
+        }
+
+            .competencias .competencia .texto span {
+
+                color: white;
+
+                font-weight: bold;
+                
+                text-align: center;
+
+
+            }
+
+            .texto-longo {
+
+                width: 57.5%
+
+            }
+            
+            .texto-pequeno {
+
+                width: 40%
+            }
+
+/* OPORTUNIDADES */
+
+.container-oportunidades {
+    
+    padding: 120px 0;
+
+}
+
+
+        .oportunidades {
+
+            display: flex;
+            
+            gap: 10px;
+
+        }
+
+            .oportunidades .oportunidade {   
+
+                border-radius: 15px;
+
+                flex: 1 1 20%;
+
+                padding-left: 20px;
+                padding-right: 20px;
+                padding-bottom: 10px;
+                padding-top: 25px;
+
+                box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.2);
+                border: solid white 1px;
+
+
+
+            }
+
+            #oportunidade-cursos {
+
+                background-color: #FAB518;
+
+            }
+
+            #oportunidade-editais {
+
+                background-color: #22944F;
+            
+            }
+
+            #oportunidade-ecossistema {
+
+                background-color: #0082C4;
+
+            }
+
+            #oportunidade-empregado {
+
+                background-color: #E40F1C;
+
+            }
+
+                .oportunidades .oportunidade h1 {
+
+                    color: white;
+
+                    font-size: 2em;
+
+                    margin-bottom: 5px;
+
+                }
+
+                #oportunidade-editais h1, #oportunidade-ecossistema h1, #oportunidade-empregado h1 {
+
+                    margin-bottom: 20px;
+                }
+
+                    .oportunidades .oportunidade ul li {
+
+                        height: 49px;
+                        background-color: white;
+
+                        margin-bottom: 10px;
+
+                        list-style: none;
+                        border-radius: 30px;
+
+                        box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.15);
+
+                        transition: ease all 0.5s;
+
+                        display: flex;
+                        align-items: center;
+
+                        gap: 10px;
+                        
+                        
+                    }
+
+                    .oportunidades .oportunidade ul li:hover {
+
+                        scale: 1.1;
+
+                        transition: ease all 0.25;
+
+                        
+                    }
+
+                        .oportunidades .oportunidade ul li a {
+
+
+                            /* Eu estava com problema para o a ter a mesma altura e largura do img dentro dele, tive de pesquisar. O problema que encontrei foi que a tag <a> não recebe a mesma altura e largura de seu filho, por exemplo, se criarmos uma div com altura 100px e largura 100px, por qual motivo explicarei em breve, a tag <a> vai ter 300px de largura e 100px de altura. Creio que tenho entendido que elementos tendem a ocupar a linha inteira, então o display inline-block serviria para ser uma mistura das qualidades que necessito de inline e block, pois o block podemos colocar altura e largura definidas, o inline vai tentar não quebrar linha - por isso do nome ser inline, do inglês na linha.
+                            
+                            Mas então surge um questionamento:
+                            
+                            A teoria seguinte e sua explicação podem estar certas, mas porque quando eu tiro o displat inline-block dessa tag em que comento, sua largura é a mesma que o filho e a altura menor?
+                            
+                            Ora, fico a mercê do que sei: "Sei que nada sei". Brincadeiras a parte, realmente não tenho conhecimento senior de CSS, no entanto uma das explicações foram que a img está em uma baseline, ou seja, ela à usa como base para colocar a imagem, na prática ela não ocupa toda, exacerbando no meu caso. Por isso a altura dessa tag pode vir a ser menor do que parece, no entanto, não haveria um problema, a altura e largura são a mesma que a imagem; a largura que aparenta ser menor do que realmente é. Existe um grandessíssimo problema no racíocinio anterior. Se ela está ocupando as dimensões da imagem, o que eu falei no começo está errado? Supostamente deveria ocupar a mesma altura e largura da linha toda.
+                            
+                            Enfim, o importante é entender que o display inline-block faz com que o pai tenha as mesmas dimensões de um filho block*/
+
+                            display: inline-block;
+                            
+                            text-decoration: none;
+
+                            font-weight: bold;
+
+                            font-size: 17px;
+
+                            
+
+
+                        }
+
+                        #oportunidade-cursos a {
+
+                            color: #FAB518
+
+                        }
+
+                        #oportunidade-editais a {
+
+                            color: #22944F;
+                        
+                        }
+
+                        #oportunidade-ecossistema a {
+
+                            color: #0082C4;
+
+                        }
+
+                        #oportunidade-empregado a {
+
+                            color: #E40F1C;
+
+                        }
+
+                                .oportunidades .oportunidade ul li a img {
+
+                                    height: 49px;
+                                    width: 49px;
+
+                                    display: block;
+
+                                }
+
+
+/* RODAPÉ */
+
+footer {
+
+    width: 100%;
+    height: 45vh;
+
+    background-image: linear-gradient(180deg, #00315E 42%, #000825 100%);
+
+    padding-top: 100px;
+
+}
+
+        footer .rodape-corpo {
+
+            display: flex;
+
+        }
+
+            footer .documentos *, footer .adicoes *{
+
+                color: white;
+
+                
+            }
+
+                footer .adicoes img {
+
+                    width: 125.547px;
+
+                    height: 38.25px;
+
+                    margin-bottom: 25px;
+
+                }
+
+                footer .adicoes .menu-cabecalho {
+
+                    margin-bottom: 10px;
+
+                }
+                
+                    .menu-cabecalho i {
+
+                        color: #00315E;
+                        background-color: #0082C4;
+
+                    }
+
+                    .menu-cabecalho li:hover i {
+
+                        background-color: #00315E;
+                        color: #0082C4;
+                        border: 2px solid #0082C4;
+
+                    }
+
+            footer .adicoes .informacoes {
+
+                margin-bottom: 10px;
+
+            }
+
+                footer .adicoes .informacoes p, footer .documentos * {
+
+                    font-size: 15px;
+                    
+                    
+                    font-weight: 100;
+
+                }
+
+                footer .adicoes .informacoes h1 {
+
+                    color: white;
+
+                    font-size: 15px;
+
+                }
+
+            footer .botao {
+
+                background-image: linear-gradient(180deg, #0082C4 0%, #003C6A 100%);
+
+                border: #0082C4 1px solid;
+
+                border-radius: 50px;
+
+                padding: 10px 15px;
+
+            }
+
+            footer .voltar a {
+
+
+            }
+
+            footer .voltar .botao {
+
+                width: 50%;
+
+            }
+
+                footer .adicoes a, footer .botao a {
+
+                    text-decoration: none;
+
+                    text-decoration: ease 0.5s all;
+                    
+                }
+
+                footer .adicoes a * {
+
+                    transition: ease 0.1s all;
+                    
+                }
+
+                footer .adicoes  a:hover .botao {
+
+                    background-image: none;
+                    color: #0082C4;
+                    border: 1px solid #0082C4;
+
+                }
+
+                footer .adicoes  a:hover i{
+
+                    color: #0082C4;
+
+                }
+
+                footer .adicoes a:hover * {
+
+                    
+                    transition: ease 0.1s all;
+
+                }
+
+                    footer .adicoes .botao p {
+
+                        font-size: 13px;
+
+                    }
+
+
+            footer .documentos {
+
+                display: flex;
+
+                flex-direction: column;
+
+            }
+
+                footer .documentos a {
+
+                    width: 100%;
+
+                    text-decoration: none;
+
+                    padding: 3px 0px;
+                    transition: 0.5s ease all;
+
+                }
+
+                footer .documentos a:hover *{
+
+                    color: #0082C4;
+                    transition: 0.5s ease all;
+
+                }
+
+                    footer .documentos a p {
+
+                        text-align: end;
+
+                    }
+
+                    
