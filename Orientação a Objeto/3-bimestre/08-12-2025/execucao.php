@@ -382,7 +382,7 @@ function jogo () {
 
                 cabecalho($opcoes[$escolhaMenuUsuario - 1]);
 
-                pontuacao($maiorPontuacao, $ultimaPontuacao);
+                pontuacao($maiorPontuacao, $ultimaPontuacao, $pontuacaoTotal);
 
                 voltar();
 
