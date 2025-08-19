@@ -312,12 +312,13 @@ function escolhaMenuUsuario ($opcoes) : int {
 
 }
 
-function pontuacao ($maiorPontuacao, $ultimaPontuacao) {
+function pontuacao ($maiorPontuacao, $ultimaPontuacao, $pontuacaoTotal) {
 
     print("Última pontuação:\n");
     print("\t" . $ultimaPontuacao . "\n");
     print("\033[33mMaior pontuação:\033[m\n");
     print("\t" . $maiorPontuacao . "\n");
+    print("\n\nPontuaçāo total: " . $pontuacaoTotal);
 
 }
 
