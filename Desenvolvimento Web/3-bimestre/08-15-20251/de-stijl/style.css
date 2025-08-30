@@ -32,6 +32,42 @@
 
 }
 
+.sem-borda {
+
+    border: none !important;
+
+}
+
+.sem-borda-direita {
+
+    border-right: none !important;
+
+}
+
+.sem-borda-esquerda {
+
+    border-left: none !important;
+    
+}
+
+.vermelho {
+
+    background-color: red;
+
+}
+
+.azul {
+
+    background-color: #0100FD;
+
+}
+
+.amarelo {
+
+    background-color: #FFFF02;
+
+}
+
 /* CSS principal */
 
 #site {
@@ -67,7 +103,7 @@
 
         #composicao div {
 
-            border: 5px solid black;
+            border: 3px solid black;
 
         }
 

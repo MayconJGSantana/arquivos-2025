@@ -72,7 +72,6 @@ h1, h2, h3 {
 .card-container {
 
     flex: 0 0 calc(25% - 15px);
-    border: solid 1px ;
 
     /* Atividade realizada 
 
@@ -86,17 +85,51 @@ h1, h2, h3 {
 .card {
     
     max-width: 100%;
-    min-height: 200px;
+    height: 100%;
 
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    padding: 10px;
+
     line-height: 150px;
 
     background: var(--tea-leaf);
     color: #fff;
 
+    border-radius: 20px;
+    border: 1px solid black;
+
 }
 
-/* Responsividade */
+    .card h1 {
+
+        font-size: calc((30 * 100vw) / 1905);
+
+    }
+
+
+    .card .imagem {
+
+        width: 100%;
+
+        display: flex;
+
+    }
+
+        .card .imagem img {
+
+            width: 100%;
+
+            height: calc((250 * 100vw) / 1905);
+
+        }
+
+    
+    /* Responsividade */
 
 /* dispositivos com no máximo 1200px */
 @media (min-width: 769px) and (max-width: 1200px) { /* Não tenho certeza disso, mas creio que poderia vir a sobrescrever não colocar um mínimo, teoricamente, se a width fosse 200px do dispositivo, estaria apta a qualquer @media que colocaríamos sem o mínimo, por isso preferi colocar, evitar margem de erro. Fiz isso com os demais @media também */
@@ -104,78 +137,118 @@ h1, h2, h3 {
     body {
 
         background-color: var(--ametist-color);
-
+        
     }
 
     .container {
-
+        
         width: 768px;
+        
+    }
+    
+    .card-container {
+        
+        flex: 0 0 calc(33.33% - 13.33px);
+        
+        /* Enfim, eu entendi o que o professor fez aqui por conta da continha gap / quantidadeCaixas = quantidadeCorretaRetirar, adivinha, 40 / 3 = 13.333333... */
+        
+    }
+    .card h1 {
+
+        font-size: calc((30 * 100vw) / 1905);
 
     }
 
-    .card-container {
+    .card .imagem img {
 
-        flex: 0 0 calc(33.33% - 13.33px);
+        width: 100%;
 
-        /* Enfim, eu entendi o que o professor fez aqui por conta da continha gap / quantidadeCaixas = quantidadeCorretaRetirar, adivinha, 40 / 3 = 13.333333... */
+        height: calc((250 * 100vw) / 1905);
 
     }
 
 }
 
 @media (min-width: 577px) and (max-width: 768px) { 
-
+    
     body {
-
+        
         background-color: var(--sunflower-color);
-
+        
     }
-
+    
     .container {
-
+        
         width: 576px;
-
+        
     }
-
+    
     .card-container {
-
+        
         flex: 0 0 calc(50% - 10px); /* 20 / 2 */
         
     }
 
-}
+    .card h1 {
 
-@media (max-width: 576px) { /* Creio que não seja tão interessante colocar um limite mínimo, não creio que seja possível construirmos aparelhos com px negativos, mas posso estar errado, então vale ficar esperto na media */
-
-    body {
-
-        background-color: var(--carrot-color);
+        font-size: calc((50 * 100vw) / 1905);
 
     }
 
-    .container {
+    .card .imagem img {
 
         width: 100%;
 
-    }
+        height: calc((400 * 100vw) / 1905);
 
+    }
+    
+}
+
+@media (max-width: 576px) { /* Creio que não seja tão interessante colocar um limite mínimo, não creio que seja possível construirmos aparelhos com px negativos, mas posso estar errado, então vale ficar esperto na media */
+    
+    body {
+        
+        background-color: var(--carrot-color);
+        
+    }
+    
+    .container {
+        
+        width: 100%;
+        
+    }
+    
     .card-container {
-
+        
         flex: 0 0 100%;
-
+        
     }
-
+    
     .menu-responsivo {
-
+        
         display: block;
-
+        
     }
-
+    
     .menu {
-
+        
         display: none;
+        
+    }
+    
+    .card h1 {
+
+        font-size: calc((90 * 100vw) / 1905);
 
     }
 
+    .card .imagem img {
+
+        width: 100%;
+
+        height: calc((1000 * 100vw) / 1905);
+
+    }
 
 }
