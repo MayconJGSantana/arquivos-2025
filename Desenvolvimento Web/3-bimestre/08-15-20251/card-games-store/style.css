@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --ametist-color: #9b59b6; 
+    --sunflower-color: #f1c40f; 
+    --carrot-color: #e67e22; 
+    --tea-leaf:#7ADAA5;
+}
+
+body {
+    background: #e8e7e7;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+h1, h2, h3 {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.container  {
+    
+    width: 1200px;
+
+    margin: 0 auto;
+    padding: 15px;
+
+    background: #fff;
+
+    /* Atividade realizada */
+
+}
+
+.menu ul {
+    margin: 20px 10px 10px 10px;
+    display: flex;
+}
+
+.menu ul li {    
+    padding: 10px;
+    list-style: none;
+}
+
+.menu-responsivo {
+    padding: 10px;
+
+    display: none;
+
+    font-size: 32px;
+    /* Atividade realizada */
+}
+
+.cards {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    /* Atividade realizada */
+
+}
+
+.card-container {
+
+    flex: 0 0 calc(25% - 15px);
+    border: solid 1px ;
+
+    /* Atividade realizada 
+
+    Importante! discuta com seus colegas e com o professor qual a razão da linha flex: 0 0 calc(25% - 15px);
+
+    Professor, primeiro, ficaria muito feliz se o senhor estivesse vendo essa mensagem. Em seguida, tenho uma boa explicação para não ter conversado com meus colegas, ela tem haver com filosofia: a voz que lê tudo na nossa mente, é a mesma "pessoa" que está escrevendo esse site? É uma questão muito interessante, eu gostaria de conversar sobre ela com você inclusive, eu creio que você acredite que elas são as mesmas, mas o senhor tem uma mente revolucionária e aberta, então é complexo afirmar o que penso, por isso do meu desejo de dialogar. Enfim, depois de superfialmente ter explicado a motivação, gostaria de fazer a reflexão "comigo mesmo", esse flex parece muito ser uma função de cálculo de área sobrando de ocupação de caixas e ao mesmo tempo descontando algo que seria adicionado, no entanto, surge uma questão que creio não ter entendido o que está sendo descontado. Entendo que tem como objetivo essa função fazer com que somente 4 caixas caibam em uma linha, por isso da porcentagem, podemos validar isso usando outro código, mas não dificultemos. Usando este código podemos observar que se tirarmos o 15px vamos acabar com 3 caixas na linha, pois durante a alteração do código tivemos algo que ocuparia uma parte da linha e consequentemente precisariamos decontar isso para podermos ocupar as 4 caixas. Tive agora um momento "Eureka!". Talvez eu possa ter vindo a achar a resposta, e é bem simples! Usamos um gap de 20px, quer dizer que entre 4 caixas existem 3 espaços, isso significa que no total teremos 20 * 3 = 60px, isso significa que temos de descontar 60px durante a execução do código para caber as caixas perfeitamente, mas, pense comigo, se cada caixa tirassem 60px do comprimento, totalizaria (60 * 4) - 60, vamos entender essa conta, a conta em parênteses significa o espaço que é retirado das caixas, ou sejam esse espaço pode vir a ficar em branco dependendo do gap, subtraímos 60 porque seria o total de gap que usamos, então ficaria 180px vazios, porque? Porque, até onde minha lógica vai, cada caixa vai passar pelo processo de retirar 60px, e não é o que queremos, queremos que o total delas sejam o gap, ou seja, gap / quantidadeCaixas = quantidadeCorretaRetirar, vamos entender a equação? Ela é bem simples, a quantidadeCaixas precisa dividir o gap porque a quantidade de vezes que as caixas retiram o número precisa totalizar, no final, o valor do gap, isso no nosso caso. Pense comigo, se executarmos fizermos a operação inversa temos que gap = quantidadeCaixas * quantidadeCorretaRetirar, no nosso caso, 60 = 4 * 15, adivinhe? 4 * 15 é 60. Então esse foi o intuito de descontar 15px, por conta do gap e a quantidade de vezes que a operação foi feita. Claro, tudo que falei pode ser totalmente uma abobrinha, mas temos algumas observações bem legais que aparentam estar corretas, mas Isaac Newton achou o mesmo sobre sua teoria e Einstein mostrou estar errado - e essa última também tem erros -, enfim acho que seja isso a reflexão que tive
+    
+    */
+}
+
+.card {
+    
+    max-width: 100%;
+    min-height: 200px;
+
+    text-align: center;
+    line-height: 150px;
+
+    background: var(--tea-leaf);
+    color: #fff;
+
+}
+
+/* Responsividade */
+
+/* dispositivos com no máximo 1200px */
+@media (min-width: 769px) and (max-width: 1200px) { /* Não tenho certeza disso, mas creio que poderia vir a sobrescrever não colocar um mínimo, teoricamente, se a width fosse 200px do dispositivo, estaria apta a qualquer @media que colocaríamos sem o mínimo, por isso preferi colocar, evitar margem de erro. Fiz isso com os demais @media também */
+
+    body {
+
+        background-color: var(--ametist-color);
+
+    }
+
+    .container {
+
+        width: 768px;
+
+    }
+
+    .card-container {
+
+        flex: 0 0 calc(33.33% - 13.33px);
+
+        /* Enfim, eu entendi o que o professor fez aqui por conta da continha gap / quantidadeCaixas = quantidadeCorretaRetirar, adivinha, 40 / 3 = 13.333333... */
+
+    }
+
+}
+
+@media (min-width: 577px) and (max-width: 768px) { 
+
+    body {
+
+        background-color: var(--sunflower-color);
+
+    }
+
+    .container {
+
+        width: 576px;
+
+    }
+
+    .card-container {
+
+        flex: 0 0 calc(50% - 10px); /* 20 / 2 */
+        
+    }
+
+}
+
+@media (max-width: 576px) { /* Creio que não seja tão interessante colocar um limite mínimo, não creio que seja possível construirmos aparelhos com px negativos, mas posso estar errado, então vale ficar esperto na media */
+
+    body {
+
+        background-color: var(--carrot-color);
+
+    }
+
+    .container {
+
+        width: 100%;
+
+    }
+
+    .card-container {
+
+        flex: 0 0 100%;
+
+    }
+
+    .menu-responsivo {
+
+        display: block;
+
+    }
+
+    .menu {
+
+        display: none;
+
+    }
+
+
+}

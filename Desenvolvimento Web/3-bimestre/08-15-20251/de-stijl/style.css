@@ -1,0 +1,78 @@
+* {
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+.col-1 {flex: 1 1 calc(100% / 12);}
+.col-2 {flex: 1 1 calc(100% / 6);}
+.col-3 {flex: 1 1 calc(100% / 4);}
+.col-4 {flex: 1 1 calc(100% / 3);}
+.col-5 {flex: 1 1 calc(100% / 12 * 5);}
+.col-6 {flex: 1 1 calc(100% / 2);}
+.col-7 {flex: 1 1 calc(100% / 12 * 7);}
+.col-8 {flex: 1 1 calc(100% / 12 * 8);}
+.col-9 {flex: 1 1 calc(100% / 12 * 9);}
+.col-10 {flex: 1 1 calc(100% / 12 * 10);}
+.col-11 {flex: 1 1 calc(100% / 12 * 11);}
+.col-12 {flex: 1 1 100%;}
+
+.coluna {
+
+    flex-direction: column;
+
+}
+
+.linha {
+
+    flex-direction: row;
+
+}
+
+/* CSS principal */
+
+#site {
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+    #composicao {
+
+        width: 100%;
+        height: 100vh;
+
+    }
+
+        #composicao .linha {
+
+            width: 100%;
+            height: calc(100% / 3);
+
+            display: flex;
+            flex-direction: row;
+
+        }
+
+                    #composicao .linha div {
+                        
+                        display: flex;
+
+                    }
+
+        #composicao div {
+
+            border: 5px solid black;
+
+        }
+
+        #composicao .linha > div {
+
+            height: 100%;
+
+        }
