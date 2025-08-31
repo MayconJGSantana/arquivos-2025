@@ -10,7 +10,7 @@ class Prato {
 
 
     // Metodos
-
+    
     public function __toString() {
 
         printf("%d. %s", $this -> numero, $this -> nome);

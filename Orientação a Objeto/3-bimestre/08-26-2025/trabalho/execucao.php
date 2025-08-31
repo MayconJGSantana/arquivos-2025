@@ -10,9 +10,11 @@ function volta() {
 
     do {
 
-        $voltar = readline("Que voltar [aperte enter] ");
+        $voltar = readline("Quer voltar [aperte enter] ");
 
-    } while ($voltar = "");
+    } while ($voltar != "");
+
+    print("\n");
 
 }
 
@@ -26,9 +28,22 @@ function lista (array $lista) {
 
 }
 
-function menu() {
+function listaPedidos ($pedidos) {
 
-    $opcoes = ["Sair", "Cadastrar", "Cancelar", "Listar", "Total de Vendas"];
+    foreach ($pedidos as $chave => $pedido) {
+
+        printf("[ %d ] - O cliente %s, foi atendido pelo garçom %s, pediu um prato de %s no valor de R$%.2f.\n\n",
+            $chave + 1,
+            $pedido -> getNomeCliente(),
+            $pedido -> getNomeGarcom(),
+            $pedido -> getPrato() -> getNome(),
+            $pedido -> getPrato() -> getValor());
+
+    }
+
+}
+
+function menu($opcoes) {
 
     foreach (array_slice($opcoes, 1) as $chave => $opcao) {
 
@@ -112,7 +127,11 @@ foreach ($pratos as $chave => $prato) {
 
 // Menu
 
-$escolhaUsuario = menu();
+
+$opcoes = ["Sair", "Cadastrar", "Cancelar", "Listar", "Total de Vendas"];
+$escolhaUsuario = menu($opcoes);
+
+print("\n");
 
 
 // Executa opções
@@ -121,7 +140,12 @@ $pedidos = array();
 
 while(true) {
 
+    
+    print("\n" . str_pad($opcoes[$escolhaUsuario], 30, "-", STR_PAD_BOTH) . "\n\n");
+    sleep(1);
+
     switch ($escolhaUsuario) {
+
 
         case 0:
 
@@ -134,11 +158,9 @@ while(true) {
             $pedido -> setNomeGarcom(readline("Nome do garçom: "))
                     -> setNomeCliente(readline("Nome do cliente: "));
 
-            print("\n\n");
+            print("\n");
 
             lista($objetoPratos);
-
-            print("\n\n");
 
             do {
 
@@ -150,11 +172,13 @@ while(true) {
 
                 }
 
-            } while(! ($prato > 0 && $prato < count($objetoPratos)));
+            } while(! ($prato > 0 && $prato <= count($objetoPratos)));
             
             $pedido -> setPrato($objetoPratos[$prato - 1]);
 
             array_push($pedidos, $pedido);
+
+            print("\n");
 
             volta();
 
@@ -170,25 +194,26 @@ while(true) {
 
             else {
 
-                foreach ($pedidos as $pedido) {
+                listaPedidos($pedidos);
 
-                    printf("O cliente %s, foi atendido pelo garçom %s, pediu um prato de %s no valor de R$%.2f.\n\n",
-                        $pedido -> getNomeCliente(),
-                        $pedido -> getNomeGarcom(),
-                        $pedido -> getPrato() -> getNome(),
-                        $pedido -> getPrato() -> getValor());
+                do {
 
-                }
+                    $indiceExcluir = readline("Qual é o pedido que queres excluir? ");
 
-                print("\n\n");
+                    if (! ($indiceExcluir > 0 && $indiceExcluir <= count($pedidos))) {
 
-                $indiceExcluir = readline("Qual é o pedido que queres excluir?");
+                        printf("\t%sValor inválido, tente novamente%s\n", "\033[31m", "\033[m");
+
+                    }
+
+                } while(! ($indiceExcluir > 0 && $indiceExcluir <= count($pedidos)));
+
                 
-                array_splice($pedidos, $indiceExcluir, 1);
-            
-                print("\n\n");
+                array_splice($pedidos, $indiceExcluir - 1, 1);
 
             }
+
+            print("\n");
 
             volta();
 
@@ -198,21 +223,13 @@ while(true) {
 
             if (empty($pedidos)) {
 
-                printf("\t%sNao há pedidos!%s\n", "\033[31m", "\033[m");
+                printf("\t%sNao há pedidos!%s\n\n", "\033[31m", "\033[m");
 
             }
 
             else {
 
-                foreach ($pedidos as $pedido) {
-
-                    printf("O cliente %s, foi atendido pelo garçom %s, pediu um prato de %s no valor de R$%.2f.\n\n",
-                        $pedido -> getNomeCliente(),
-                        $pedido -> getNomeGarcom(),
-                        $pedido -> getPrato() -> getNome(),
-                        $pedido -> getPrato() -> getValor());
-
-                }
+                listaPedidos($pedidos);
 
             }
 
@@ -224,7 +241,7 @@ while(true) {
 
             if (empty($pedidos)) {
 
-                printf("\t%sNao há pedidos!%s\n", "\033[31m", "\033[m");
+                printf("\t%sNao há pedidos!%s\n\n", "\033[31m", "\033[m");
 
             }
 
@@ -242,10 +259,12 @@ while(true) {
                 
             }
 
+            volta();
+
             break;
 
     }
 
-    $escolhaUsuario = menu();
+    $escolhaUsuario = menu($opcoes);
 
 }
