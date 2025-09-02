@@ -5,15 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <script>
-
-        while (true) {
-
-            continue;
-
-        }
-
-    </script>
 
 </head>
 <body>
@@ -22,9 +13,53 @@
 
         Hello World!
 
-        https://prod.liveshare.vsengsaas.visualstudio.com/join?91C57DE70CE3F0364DD9F3AC1AF8C786BC95
-
     </h1>
+
+
+    <p id="texto-inicial">
+
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, quas dolore adipisci tempora sunt, aliquam culpa quae eaque nihil molestiae vero voluptates amet similique animi neque reiciendis itaque aliquid doloremque.
+
+    </p>
+
+
+    <p class="texto">
+
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente rem aliquid laboriosam modi recusandae facere similique nisi voluptatibus esse voluptatum earum nihil repudiandae odit eos voluptates molestiae, ipsa minima accusamus?
+    
+    </p>
+
+    <div class="caixa">
+
+    </div>
+
+    <!-- <button onclick="teste()"> Legal </button>  não é o ideal, pois  -->
+
+    <script>
+
+        function teste() {
+
+            let titulo = document.querySelector("h1");
+
+            titulo.innerText = "Easter Egg";
+
+        }
+        // alert("Hello World!")
+
+        let paragrafoInicial = document.getElementById("texto-inicial"); /* Retornará todos elementos de tag p, ou seja, retorna array */
+
+        var elementoEspecifico = document.getElementById("teste"); /* Retornará somente um elemento, com o id entre aspas */
+
+        var elementosClasse = document.querySelector(".caixa") /* Retorna a primeira ocorrencia do elemento, o primeiro */
+
+        var elementosClasse = document.querySelectorAll(".caixa"); /* Retorna todas as ocorrencias */ 
+
+        paragrafoInicial.innerText = "Hello World!";
+
+        add
+
+
+    </script>
 
 </body>
 

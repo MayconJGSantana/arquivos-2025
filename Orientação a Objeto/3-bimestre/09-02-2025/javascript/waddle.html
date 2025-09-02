@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        #imagem-waddles {
+
+            display: inline-block;
+            border: 2px solid grey;
+            border-radius: 20px;
+            overflow: hidden;
+
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div id="imagem-waddles">
+        
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgcKS0wq5He58B7H3rT4FZ7XFaDGN3BZy36w&s" alt="">
+
+    </div>
+
+    <p id="texto-waddles">
+        
+
+    </p>
+
+
+    <script>
+
+        function mensagemWaddles(tipo = 1) {
+
+            let texto = document.getElementById("texto-waddles");
+
+            if (tipo == "1") {
+
+                texto.innerText = "Está solteira?";
+
+            }
+
+            else if (tipo == "2") {
+
+
+            }
+
+        }
+
+        let waddles = document.querySelector("#imagem-waddles");
+
+        waddles.onclick = mensagemWaddle; /* Dá para passar parâmetro se usar funções anônimas */
+        
+    </script>
+</body>
+</html>
