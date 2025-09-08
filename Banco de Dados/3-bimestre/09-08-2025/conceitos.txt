@@ -5,7 +5,8 @@ CREATE TABLE IF NOT EXISTS personagem (
     personagem VARCHAR(40) NOT NULL,
     cache INT NOT NULL,
     PRIMARY KEY (codFilme, codAtor, personagem, cache),
-    FOREIGN KEY (codAtor) REFERENCES ator(codAtor)
+    FOREIGN KEY (codAtor) REFERENCES ator(codAtor),
+    FOREIGN KEY (codFilme) REFERENCES filme(codFilme)
 
 );
 
