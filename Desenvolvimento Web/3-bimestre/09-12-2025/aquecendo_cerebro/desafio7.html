@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button id="inicia-contagem">Contagem regressiva</button>
+
+    <p id="contagem-regressiva"></p>
+    
+
+    <script>
+
+        let botaoContagem = document.querySelector("#inicia-contagem")
+        let contagemRegressiva = document.querySelector("#contagem-regressiva")
+        let inicioContagem = 10
+
+        botaoContagem.addEventListener("click",
+        () => {
+            
+            let intervalo = setInterval(() => {
+
+            contagemRegressiva.innerText = inicioContagem
+
+            inicioContagem -= 1
+
+            if (inicioContagem == 0) {
+
+                clearInterval(intervalo)
+
+            }
+
+            }, 1000)
+
+        })
+
+
+    </script>
+
+</body>
+</html>

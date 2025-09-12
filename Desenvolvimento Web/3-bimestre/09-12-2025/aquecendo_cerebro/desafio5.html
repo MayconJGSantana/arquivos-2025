@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        * {
+
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+
+        }
+
+        #coracao {
+
+            display: none;
+            justify-content: center;
+
+        }
+
+            #coracao img{
+
+                width: 50%;
+                height: 50%;
+
+            }
+
+    </style>
+</head>
+<body>
+    
+    <label for="nome">Alimento favorito</label>
+    <input id="texto" type="text">
+
+    <p id="texto-chocolate"></p> 
+
+    <div id="coracao">
+
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/250px-Heart_coraz%C3%B3n.svg.png" alt="coracao">
+    
+    </div>
+    
+
+    <script>
+
+        let texto = document.querySelector("#texto");
+        let textoChocolate = document.querySelector("#texto-chocolate")
+
+        texto.addEventListener("input", () => {
+             
+            if(texto.value.toLowerCase() == "choux cream")  {
+
+                textoChocolate.innerText = "É igual a choux cream!!! "
+                document.querySelector("#coracao").style.display = "flex"
+                   
+            }
+
+            else {
+
+
+                textoChocolate.innerText = "Não é choux cream :("
+            }
+
+        }
+
+        )
+
+    </script>
+</body>
+</html>
