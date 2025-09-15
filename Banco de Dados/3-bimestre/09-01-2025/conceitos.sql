@@ -84,3 +84,4 @@ INSERT INTO paciente VALUES (7, 'Teste', '2504-03-25', '96521559179', 'Foz do Ig
 
 ON DELETE CASCADE FROM paciente
 WHERE codPac = 3;
+
