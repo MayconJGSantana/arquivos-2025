@@ -16,16 +16,14 @@
 
         let botaoContagem = document.querySelector("#inicia-contagem")
         let contagemRegressiva = document.querySelector("#contagem-regressiva")
-        let inicioContagem = 10
 
-        botaoContagem.addEventListener("click",
-        () => {
+        botaoContagem.addEventListener("click", () => {
             
+            let inicioContagem = 10
+
             let intervalo = setInterval(() => {
 
             contagemRegressiva.innerText = inicioContagem
-
-            inicioContagem -= 1
 
             if (inicioContagem == 0) {
 
@@ -35,10 +33,11 @@
 
             }
 
+            inicioContagem-- // Poderia ser inicioContagem -= 1
+
             }, 1000)
-
+            
         })
-
 
     </script>
 

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang=pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        
+        Document
+
+    </title>
+
+    <style>
+
+        .tema-escuro {
+
+            background-color: black;
+
+        }
+
+            .tema-escuro h1 {
+
+                color: white;
+
+            }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1> Algum site </h1>
+
+    <button class="alternarTema">
+        
+        Mudar tema
+    
+    </button>
+    
+    <script>
+
+        let site = document.querySelector("body")
+        let botao = document.querySelector(".alternarTema")
+
+        botao.addEventListener('click', () => {
+
+            site.classList.toggle('tema-escuro')
+
+            valorTema = site.classList.contains("1") // valorTema = site.classList.keys("1")
+
+         
+            if (valorTema) {
+   localStora    localStorage.setItem("modo", "tema-escuro")
+
+            }
+
+            else {
+
+                localStorage.setItem("modo", '')
+                
+            }})
+
+        site.classList.add(localStorage.getItem("modo")) // Não é 100% suficiente, pois se não houver nada no localStorage, ele adicionará nada no body
+
+    </script>
+
+</body>
+
+</html>
