@@ -1,5 +1,3 @@
--- https://prod.liveshare.vsengsaas.visualstudio.com/join?1585E8839D86F238A635DDAA6F6D4433B336
-
 CREATE DATABASE EmpresaRevisao;
 
 USE EmpresaRevisao;
