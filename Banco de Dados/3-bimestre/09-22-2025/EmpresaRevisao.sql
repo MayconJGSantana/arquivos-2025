@@ -121,13 +121,13 @@ WHERE funcionario.funcao = 'Supervisor' AND funcionario.codigoDepartamento = dep
 
 -- k)
 
-SELECT count(*)
+SELECT COUNT(*)
 FROM funcionario;
 
 
 -- l)
 
-SELECT sum(salario) / (SELECT COUNT(*) FROM funcionario)
+SELECT SUM(salario) / (SELECT COUNT(*) FROM funcionario)
 FROM funcionario;
 
 
