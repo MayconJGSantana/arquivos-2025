@@ -1,17 +1,34 @@
 <?php
 
-class Aluno {
+require_once("Pessoa.php"); 
+
+class Aluno extends Pessoa {
 
     // Atributos
 
-    private $nome;
-    private $rg;
-    private $idade;
-    private $matricula;
-https://prod.liveshare.vsengsaas.visualstudio.com/join?B0404E5E51351B2FAC44B748F5158D41974F
+    private string $matricula;
 
     // Métodos
 
     
+
+
+    /**
+     * Get the value of matricula
+     */
+    public function getMatricula()
+    {
+        return $this->matricula;
+    }
+
+    /**
+     * Set the value of matricula
+     */
+    public function setMatricula($matricula): self
+    {
+        $this->matricula = $matricula;
+
+        return $this;
+    }
 
 }
