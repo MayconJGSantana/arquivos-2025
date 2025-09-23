@@ -1,3 +1,5 @@
+-- https://prod.liveshare.vsengsaas.visualstudio.com/join?1585E8839D86F238A635DDAA6F6D4433B336
+
 CREATE DATABASE EmpresaRevisao;
 
 USE EmpresaRevisao;
@@ -27,6 +29,13 @@ CREATE TABLE funcionario (
     salario DOUBLE NOT NULL
 );
 
+INSERT INTO departamento 
+VALUES 
+(1, 'TI', 'Bloco A, 2º andar', 1),
+(2, 'Recursos Humanos', 'Bloco B, 1º andar', 2),
+(3, 'Financeiro', 'Bloco C, 3º andar', 3),
+(4, 'Marketing', 'Bloco D, 4º andar', 4);
+
 INSERT INTO funcionario
 VALUES
 (1, 'João', 'Carlos', 'Silva', '1985-04-15', '12345678901', 'MG1234567', 'Rua das Flores, 123', '12345000', 'São Paulo', '(11) 98765-4321', 1, 'Analista', 3500.00),
@@ -44,14 +53,14 @@ VALUES
 -- ALTER TABLE departamento DROP FOREIGN KEY codigoFuncionarioGerente;
 
 
-INSERT INTO departamento 
-VALUES 
-(1, 'TI', 'Bloco A, 2º andar', 1),
-(2, 'Recursos Humanos', 'Bloco B, 1º andar', 2),
-(3, 'Financeiro', 'Bloco C, 3º andar', 3),
-(4, 'Marketing', 'Bloco D, 4º andar', 4);
 
--- ALTER TABLE departamento ADD CONSTRAINT codigoFuncionarioGerente FOREIGN KEY (codigoFuncionarioGerente) REFERENCES funcionario(codigoFuncionario);
+ALTER TABLE departamento ADD CONSTRAINT codigoFuncionarioGerente FOREIGN KEY (codigoFuncionarioGerente) REFERENCES funcionario(codigoFuncionario);
+
+INSERT INTO departamento (codigoFuncionarioGerente)
+VALUES (1),
+       (2),
+       (3),
+       (4);
 
 
 -- a)
@@ -105,16 +114,16 @@ WHERE FUNCIONARIO.codigoDepartamento = DEPARTAMENTO.codigoDepartamento;
 
 -- h)
 
-SELECT nome, FUNCIONARIO.codigoFuncionarioGerente
+SELECT nome, FUNCIONARIO.primeiroNme, FUNCIONARIO.segundoNome, 
 FROM departamento
 WHERE DEPARTAMENTO.codigoFuncionarioGerente = FUNCIONARIO.codigoFuncionario;
 
 
 -- i)
 
-SELECT sum(FUNCIONARIO.salario)
+SELECT nome
 FROM departamento
-WHERE codigo;
+WHERE codigoDepartamnto = (SELECT );
 
 
 -- j)
@@ -132,7 +141,7 @@ FROM funcionario;
 
 -- l)
 
-SELECT sum(salario) / (SELECT COUNT(*) FROM departamento)
+SELECT sum(salario) / (SELECT COUNT(*) FROM funcionario)
 FROM funcionario;
 
 
@@ -140,4 +149,26 @@ FROM funcionario;
 
 SELECT primeiroNome, segundoNome, ultimoNome
 FROM funcionario
+WHERE cidade = 'Recife' AND funcao = 'Telefonista';
+
+
+-- n)
+
+SELECT nome, FUNCIONARIO.primeiroNome, FUNCIONARIO.segundoNome, FUNCIONARIO.ultimoNome
+FROM departamento, funcionario
+ORDER BY nome, FUNCIONARIO.primeiroNome, FUNCIONARIO.segundoNome, FUNCIONARIO.ultimoNome;
+
+
+-- o)
+
+SELECT primeiroNome, ultimoNome
+FROM funcionario
+WHERE segundoNome = null;
+
+
+-- p)
+
+
+
+
 
