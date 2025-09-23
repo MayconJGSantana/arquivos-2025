@@ -8,8 +8,18 @@ class Aluno extends Pessoa {
 
     private string $matricula;
 
+
     // Métodos
 
+    public function __toString()
+    {
+        
+        $dados = "Nome: " . $this -> getNome() . "\n";
+        $dados .= "RG: " . $this -> getRG() . "\n";
+        $dados .= "Idade: " . $this -> getIdade() . "\n";
+        $dados .= "Matrícula: " . $this -> matricula;
+         
+    }
     
 
 

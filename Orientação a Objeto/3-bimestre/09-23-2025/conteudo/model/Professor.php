@@ -9,7 +9,7 @@ class Professor extends Pessoa {
 
     private float $salario;
     
-
+Orientação a Objeto/3-bimestre/09-23-2025/conteudo/model/Professor.php
     /**
      * Get the value of salario
      */

@@ -4,9 +4,9 @@ class Pessoa {
 
     // Atributos
 
-    private string $nome;
-    private int $rg;
-    private int $idade;
+    protected string $nome;
+    protected int $rg;
+    protected int $idade;
     
 
     /**

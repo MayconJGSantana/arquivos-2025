@@ -11,9 +11,9 @@ CREATE TABLE departamento (
 
 CREATE TABLE funcionario (
 	codigoFuncionario INT PRIMARY KEY,
-    primeiroNome VARCHAR(25) NOT NULL,
-    segundoNome VARCHAR(25) NOT NULL,
-    ultimoNome VARCHAR (25) NOT NULL,
+    primeiroNome VARCHAR(25),
+    segundoNome VARCHAR(25),
+    ultimoNome VARCHAR (25),
     dataNascimento DATE NOT NULL,
     cpf VARCHAR(11) NOT NULL,
     rg VARCHAR(20) NOT NULL,
@@ -29,36 +29,23 @@ CREATE TABLE funcionario (
 
 INSERT INTO departamento 
 VALUES 
-(1, 'TI', 'Bloco A, 2º andar', 1),
-(2, 'Recursos Humanos', 'Bloco B, 1º andar', 2),
-(3, 'Financeiro', 'Bloco C, 3º andar', 3),
-(4, 'Marketing', 'Bloco D, 4º andar', 4);
+(1, 'TI', 'Bloco A', 1),
+(2, 'RH', 'Bloco B', 2),
+(3, 'Financeiro', 'Bloco C', 3),
+(4, 'Marketing', 'Bloco D', 7);
 
 INSERT INTO funcionario
 VALUES
-(1, 'João', 'Carlos', 'Silva', '1985-04-15', '12345678901', 'MG1234567', 'Rua das Flores, 123', '12345000', 'São Paulo', '(11) 98765-4321', 1, 'Analista', 3500.00),
-(2, 'Maria', 'Fernanda', 'Oliveira', '1990-08-22', '23456789012', 'SP2345678', 'Avenida Brasil, 456', '23456000', 'Rio de Janeiro', '(21) 91234-5678', 2, 'Gerente', 5500.00),
-(3, 'Carlos', 'Eduardo', 'Pereira', '1978-11-10', '34567890123', 'RJ3456789', 'Praça da Sé, 789', '34567000', 'Belo Horizonte', '(31) 92345-6789', 3, 'Coordenador', 4500.00),
-(4, 'Ana', 'Beatriz', 'Costa', '1995-05-18', '45678901234', 'MG4567890', 'Rua XV de Novembro, 101', '45668000', 'Curitiba', '(41) 93456-7890', 1, 'Assistente', 3000.00),
-(5, 'Felipe', 'Augusto', 'Martins', '1982-12-30', '56789012345', 'SP5678901', 'Rua do Comércio, 202', '56789000', 'Porto Alegre', '(51) 93456-8901', 2, 'Diretor', 7000.00),
-(6, 'Juliana', 'Silva', 'Santos', '1992-03-25', '67890123456', 'PR6789012', 'Avenida Rio Branco, 303', '67890000', 'Salvador', '(71) 94321-0987', 3, 'Analista', 3200.00),
-(7, 'Rafael', 'Alves', 'Sousa', '1987-09-12', '78901234567', 'SP7890123', 'Rua Santa Teresa, 404', '78901000', 'Fortaleza', '(85) 92134-5678', 1, 'Técnico', 2800.00),
-(8, 'Patricia', 'Maria', 'Lima', '1994-06-08', '89012345678', 'MG8901234', 'Rua São João, 505', '89001000', 'Brasília', '(61) 93123-4567', 2, 'Supervisor', 4800.00),
-(9, 'Roberto', 'Silveira', 'Gomes', '1983-07-14', '90123456789', 'RJ9012345', 'Avenida Atlântica, 606', '90123000', 'Recife', '(81) 92123-6789', 3, 'Consultor', 4000.00),
-(10, 'Larissa', 'Carolina', 'Oliveira', '1996-02-17', '01234567890', 'SP0123456', 'Rua das Acácias, 707', '01234000', 'Manaus', '(92) 93000-1234', 1, 'Estagiária', 1800.00);
-
-
--- ALTER TABLE departamento DROP FOREIGN KEY codigoFuncionarioGerente;
-
-
+(1, 'João', 'Carlos', 'Silva', '1985-04-15', '12345678901', 'MG1234567', 'Rua A', '11111111', 'São Paulo', '1111-1111', 1, 'Gerente', 6000.00),
+(2, 'Maria', 'Fernanda', 'Oliveira', '1990-08-22', '23456789012', 'SP2345678', 'Rua B', '22222222', 'Curitiba', '2222-2222', 2, 'Supervisor', 4500.00),
+(3, 'Carlos', NULL, 'Pereira', '1978-11-10', '34567890123', 'RJ3456789', 'Rua C', '33333333', 'Recife', '3333-3333', 3, 'Telefonista', 2200.00),
+(4, 'Ana', 'Beatriz', 'Costa', '1995-05-18', '45678901234', 'MG4567890', 'Rua D', '44444444', 'Recife', '4444-4444', 1, 'Analista', 3500.00),
+(5, 'Felipe', NULL, 'Martins', '1982-12-30', '56789012345', 'SP5678901', 'Rua E', '55555555', 'Porto Alegre', '5555-5555', 2, 'Gerente', 5000.00),
+(6, 'Juliana', 'Silva', 'Santos', '1992-03-25', '67890123456', 'PR6789012', 'Rua F', '66666666', 'São Paulo', '6666-6666', 3, 'Técnico', 2800.00),
+(7, 'Patricia', 'Maria', 'Lima', '1994-06-08', '89012345678', 'MG8901234', 'Rua G', '77777777', 'Belo Horizonte', '7777-7777', 4, 'Gerente', 5200.00),
+(8, 'Roberto', 'Silveira', 'Gomes', '1983-07-14', '90123456789', 'RJ9012345', 'Rua H', '88888888', 'Manaus', '8888-8888', 4, 'Consultor', 4100.00);
 
 ALTER TABLE departamento ADD CONSTRAINT codigoFuncionarioGerente FOREIGN KEY (codigoFuncionarioGerente) REFERENCES funcionario(codigoFuncionario);
-
-INSERT INTO departamento (codigoFuncionarioGerente)
-VALUES (1),
-       (2),
-       (3),
-       (4);
 
 
 -- a)
@@ -87,7 +74,7 @@ ORDER BY primeiroNome, segundoNome, ultimoNome;
 
 SELECT dataNascimento, primeiroNome
 FROM funcionario
-ORDER BY dataNascimento;
+ORDER BY dataNascimento DESC;
 
 
 -- e)
@@ -99,36 +86,37 @@ ORDER BY ultimoNome, primeiroNome;
 
 -- f)
 
-SELECT sum(salario)
+SELECT SUM(salario)
 FROM funcionario;
 
 
 -- g)
 
-SELECT primeiroNome, funcao, DEPARTAMENTO.nome
+SELECT funcionario.primeiroNome, funcionario.funcao, departamento.nomeDepartamento
 FROM funcionario, departamento
-WHERE FUNCIONARIO.codigoDepartamento = DEPARTAMENTO.codigoDepartamento;
+WHERE funcionario.codigoDepartamento = departamento.codigoDepartamento;
 
 
 -- h)
 
-SELECT nome, FUNCIONARIO.primeiroNme, FUNCIONARIO.segundoNome, 
-FROM departamento
-WHERE DEPARTAMENTO.codigoFuncionarioGerente = FUNCIONARIO.codigoFuncionario;
+SELECT nomeDepartamento, funcionario.primeiroNome as primeiroNomeGerente, funcionario.ultimoNome as SobrenomeGerente
+FROM departamento, funcionario
+WHERE departamento.codigoFuncionarioGerente = funcionario.codigoFuncionario;
 
 
 -- i)
 
-SELECT nome
-FROM departamento
-WHERE codigoDepartamnto = (SELECT );
+SELECT SUM(funcionario.salario), nomeDepartamento
+FROM departamento, funcionario
+WHERE departamento.codigoDepartamento = funcionario.codigoDepartamento
+GROUP BY departamento.nomeDepartamento;
 
 
 -- j)
 
-SELECT *
-FROM funcionario
-WHERE funcao = 'Supervisor';
+SELECT primeiroNome, segundoNome, ultimoNome, funcao, departamento.nomeDepartamento
+FROM funcionario, departamento
+WHERE funcionario.funcao = 'Supervisor' AND funcionario.codigoDepartamento = departamento.codigoDepartamento;
 
 
 -- k)
@@ -152,21 +140,21 @@ WHERE cidade = 'Recife' AND funcao = 'Telefonista';
 
 -- n)
 
-SELECT nome, FUNCIONARIO.primeiroNome, FUNCIONARIO.segundoNome, FUNCIONARIO.ultimoNome
+SELECT nomeDepartamento, funcionario.primeiroNome, funcionario.segundoNome, funcionario.ultimoNome
 FROM departamento, funcionario
-ORDER BY nome, FUNCIONARIO.primeiroNome, FUNCIONARIO.segundoNome, FUNCIONARIO.ultimoNome;
+ORDER BY nomeDepartamento, funcionario.primeiroNome, funcionario.segundoNome, funcionario.ultimoNome;
 
 
 -- o)
 
 SELECT primeiroNome, ultimoNome
 FROM funcionario
-WHERE segundoNome = null;
+WHERE segundoNome IS NULL OR segundoNome = "";
 
 
 -- p)
 
-
-
-
-
+SELECT MIN(funcionario.salario), nomeDepartamento
+FROM departamento, funcionario
+WHERE departamento.codigoDepartamento = funcionario.codigoDepartamento
+GROUP BY departamento.nomeDepartamento;
