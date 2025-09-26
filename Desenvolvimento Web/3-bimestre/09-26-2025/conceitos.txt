@@ -1,6 +1,0 @@
-https://prod.liveshare.vsengsaas.visualstudio.com/join?34FD529E6FBC705E2B6722DB7A524D0889AF
-
-let noticiaEscolhida = document.querySelectorAll('.post__title')[1];
-let imagemNoticiaEscolhida = document.querySelectorAll('.post__image')[1];
-
-noticiaEscolhida
