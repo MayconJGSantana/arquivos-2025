@@ -1,0 +1,24 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.site {
+
+    display: flex;
+
+    padding-left: 20vw;
+    padding-right: 20vw;
+    flex-direction: column;
+    
+}
+
+#muda-secao {
+
+    padding-top: 5vh;
+    padding-bottom: 2vh;
+
+}
