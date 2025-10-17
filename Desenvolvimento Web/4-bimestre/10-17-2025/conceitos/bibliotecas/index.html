@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .chart-wrapper {
+
+            display: flex;
+            justify-content: center;
+            height: 600px;
+            overflow: hidden;
+
+        }
+    </style>
+</head>
+<body>
+
+    <div class="chart-wrapper">
+
+        <canvas class="chart">
+
+        </canvas>
+
+    </div>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.5.0/chart.min.js"></script> --> 
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+
+        const chart = document.querySelector('.chart')
+
+        new Chart(chart, {
+
+            type: 'pie',
+            data: {
+
+                labels: ["Comprometimento", "Aliança", "Conversa", "Companheirismo", "Conhecimento", "Futuro"],
+                datasets: [{data: [100, 100, 10000, 10000, 1000, 1000]}]
+
+            }
+
+        })
+    </script>
+    
+</body>
+</html>
