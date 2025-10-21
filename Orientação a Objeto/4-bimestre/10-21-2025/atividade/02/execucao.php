@@ -28,9 +28,9 @@ for ($i = 0; $i < 5; $i++) {
             $midia = new Dvd();
             break;
 
-        case 3:
+        default:
             
-            $midia = new Midia();
+            print("Valor inválido!");
             break;
 
     }
