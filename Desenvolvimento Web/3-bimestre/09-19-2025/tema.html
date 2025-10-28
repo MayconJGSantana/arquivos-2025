@@ -51,7 +51,7 @@
 
          
             if (valorTema) {
-   localStora    localStorage.setItem("modo", "tema-escuro")
+                localStorage.setItem("modo", "tema-escuro")
 
             }
 
@@ -59,7 +59,9 @@
 
                 localStorage.setItem("modo", '')
                 
-            }})
+            }
+        
+        })
 
         site.classList.add(localStorage.getItem("modo")) // Não é 100% suficiente, pois se não houver nada no localStorage, ele adicionará nada no body
 
