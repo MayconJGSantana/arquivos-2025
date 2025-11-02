@@ -1,12 +1,14 @@
-let formulario = document.querySelector("#formulario")
-let mensagemErro = document.querySelector(".mensagem-erro")
+let formulario = document.querySelector('#formulario')
+let mensagemErro = document.querySelector('.mensagem-erro')
+let botaoMostrarSenha = document.querySelector('#mostrar-senha')
+let botaoMostrarSenhaConfirmacao = document.querySelector('#mostrar-confirmacao-senha')
 
 formulario.addEventListener("submit", (propriedades) => {
 
-    let nome = document.querySelector("#nome").value
-    let email = document.querySelector("#email").value
-    let senha = document.querySelector("#senha").value
-    let confirmacaoSenha = document.querySelector("#confirmacao-senha").value
+    let nome = document.querySelector('#nome').value
+    let email = document.querySelector('#email').value
+    let senha = document.querySelector('#senha').value
+    let confirmacaoSenha = document.querySelector('#confirmacao-senha').value
 
     const formatoEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9._%+-]+\.[a-zA-Z]{2,}$/
     const formatoSenha = /^(?=.*[A-Z])(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/
@@ -44,5 +46,28 @@ formulario.addEventListener("submit", (propriedades) => {
     }
 
     formulario.reset()
+
+})
+
+botaoMostrarSenha.addEventListener("mousedown", () => {
+
+    document.querySelector('#senha').type = 'text';
+
+})
+botaoMostrarSenha.addEventListener("mouseup", () => {
+
+    document.querySelector('#senha').type = 'password';
+
+})
+
+botaoMostrarSenhaConfirmacao.addEventListener("mousedown", () => {
+    
+    document.querySelector('#confirmacao-senha').type = 'text';
+
+
+})
+botaoMostrarSenhaConfirmacao.addEventListener("mouseup", () => {
+
+    document.querySelector('#confirmacao-senha').type = 'password';
 
 })

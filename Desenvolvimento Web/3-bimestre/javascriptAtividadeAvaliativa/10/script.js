@@ -7,10 +7,7 @@ const imagens = [
 
                 ]
 
-const imagemCarrosel = document.querySelector("#imagem-carrosel img")
-
-const botaoProxima = document.querySelector("#botao-proxima")
-const botaoAnterior = document.querySelector("#botao-anterior")
+const imagemCarrosel = document.querySelector("#imagem img")
 
 let chaveSourceImagem
 let proximaChaveSourceImagem
@@ -19,25 +16,7 @@ let proximaChaveSourceImagem
 imagemCarrosel.src = imagens[0]
 
 
-
-botaoAnterior.addEventListener("click", () => {
-
-
-    chaveSourceImagem = imagens.indexOf(imagemCarrosel.src)
-
-    proximaChaveSourceImagem = chaveSourceImagem - 1
-
-    if (proximaChaveSourceImagem == -1) {
-
-        proximaChaveSourceImagem = imagens.length - 1;
-        
-    }
-
-    imagemCarrosel.src = imagens[proximaChaveSourceImagem]
-
-})
-
-botaoProxima.addEventListener("click", () => {
+function trocarImagem() {
 
     chaveSourceImagem = imagens.indexOf(imagemCarrosel.src)
 
@@ -47,6 +26,8 @@ botaoProxima.addEventListener("click", () => {
 
     imagemCarrosel.src = imagens[proximaChaveSourceImagem]
 
-    console.log()
+    setTimeout(trocarImagem, 5000);
 
-})
+}
+
+trocarImagem();
