@@ -28,14 +28,15 @@ CREATE TABLE pedido (
 );
 
 INSERT INTO pedido (nome, valor, idCliente) VALUES
-('notebook', '3000', '1'),
-('smartphone', '150', '2'),
-('mouse', '50', '1');
+('Notebook', '3000', '1'),
+('Smartphone', '150', '2'),
+('Mouse', '50', '1'),
+('Teclado', '80', '3');
 
 
 -- Exercício 1
 
-SELECT  *
+SELECT cliente.nome as cliente, pedido.nome as produto, pedido.valor as valorProduto
 FROM pedido
 INNER JOIN cliente
 ON pedido.idCliente = cliente.id;
@@ -48,5 +49,3 @@ FROM cliente
 INNER JOIN pedido
 ON pedido.idCliente = cliente.id
 WHERE pedido.valor > '1000';
-
-https://prod.liveshare.vsengsaas.visualstudio.com/join?63A8BCDB0DCF8D507BC3BD2BFECA2BF34CEA
