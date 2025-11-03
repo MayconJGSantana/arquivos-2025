@@ -1,10 +1,27 @@
-JavaScript é uma linguagem de programação usada por desenvolvedores para fazer páginas interativas da Internet. As funções de JavaScript podem melhorar a experiência do usuário durante a navegação em um site, como, por exemplo, desde a atualização do feed na página da mídia social até a exibição de animações e mapas interativos. Como uma linguagem de script do lado do cliente, ele é uma das tecnologias principais da World Wide Web. Por exemplo, ao navegar na Internet, é possível visualizar a qualquer momento um carrossel de imagens, um menu suspenso “clicar para visualizar” ou mesmo mudar dinamicamente as cores dos elementos de uma página da Web. Tudo isso graças ao JavaScript.
-Qual a utilidade do JavaScript?
+1. "JAVASCRIPT" 
 
-Anteriormente, as páginas da Web eram estáticas como páginas em um livro. Uma página estática exibia basicamente informações em um layout fixo e não fazia tudo que esperamos de um site moderno hoje em dia. O JavaScript surgiu como uma tecnologia do lado do navegador para tornar as aplicações Web mais dinâmicas. Ao usar JavaScript, os navegadores passaram a ser capazes de responder a interações do usuário e alterar o layout do conteúdo na página.
+    Esse documente referência a busca do porquê utilizar o "JavaScript" de cunho "frontend", ou seja, alteração ou formação de uma interface visual e gráfica.
 
-https://aws.amazon.com/pt/what-is/javascript/
+    "JavaScript" é uma linguagem de programação versátil e amplamente utilizada. Sua função é fornecer funcionalidades avançadas aos navegadores, tornando a experiência do usuário mais fluida e interativa. Além de ser a principal linguagem de programação no desenvolvimento web, também contribui a muitos outros contextos, como aplicações móveis, servidores, jogos e até Internet das Coisas. Com "JavaScript", é possível criar interações dinâmicas, validar formulários, manipular dados, realizar chamadas assíncronas e muito mais. 
 
-https://www.dio.me/technologies/javascript
+1.1. POR QUÊ USAR COMO "FRONT-END"
 
-https://developer.mozilla.org/pt-BR/docs/Learn_web_development/Core/Scripting/What_is_JavaScript
+    O lado do servidor ("server-side") e lado do cliente ("client-side") assemelham-se, respectivamente, ao "backend" e ao "frontend". Códigos do lado do cliente são executados no computador do usuário — quando uma página web é visualizada, o código do lado do cliente é baixado, executado e exibido pelo navegador.
+
+    Códigos do lado do servidor, por outro lado, são executados no servidor e o resultado da execução é baixado e exibido no navegador. Exemplos de linguagens do lado do servidor populares incluem PHP, Python, Ruby, e ASP.NET. Ele também pode ser usada como uma linguagem server-side, por exemplo, no popular ambiente Node.js
+
+    Como uma linguagem de script do lado do cliente, ao navegar na Internet, é possível visualizar a qualquer momento um carrossel de imagens, um menu suspenso ou mesmo mudar dinamicamente as cores dos elementos de uma página da "Web". Tudo isso graças ao "JavaScript".
+
+    Anteriormente, as páginas da "Web" eram estáticas como páginas em um livro. Uma página estática exibia basicamente informações em um "layout" fixo e não fazia tudo que esperamos de um site moderno hoje em dia. O "JavaScript" surgiu como uma tecnologia do lado do navegador para tornar as aplicações "Web" mais dinâmicas. Ao usar "JavaScript", os navegadores passaram a ser capazes de responder a interações do usuário e alterar o "layout" do conteúdo na página.
+
+2. CONCLUSÃO
+
+    Em suma, antes da chegada dessa linguagem de programação, os sites limitavam-se a criar páginas visuais ao usuário de forma estática, não havia a possibilidade de gerar interações sem um controlador delas. Assim o "JavaScript" permitiu implementar, deletar e dinamizar uma aplicação "Web".
+
+3. REFERÊNCIAS BIBLIOGRÁFICAS
+
+O que é o JavaScript (JS)? [site]. Disponível em: https://aws.amazon.com/pt/what-is/javascript/. Acesso em: 2 out. 2025.
+
+Javascript [site]. Disponível em: https://www.dio.me/technologies/javascript. Acesso em: 2 out. 2025.
+
+O que é JavaScript [site]. Disponível em: https://developer.mozilla.org/pt-BR/docs/Learn_web_development/Core/Scripting/What_is_JavaScript. Acesso em: 2 out. 2025.

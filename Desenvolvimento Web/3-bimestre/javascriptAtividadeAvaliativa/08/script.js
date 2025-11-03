@@ -6,22 +6,29 @@ entradaComida.addEventListener("input", () => {
 
     let comida = entradaComida.value
 
-    console.log(comida)
+    if (comida.length > 3) {
 
-    if (comida == "chocolate") {
+        if (comida == "chocolate") {
 
-        resultado.innerText = "Eu amo sorvete de chocolate!"
+            resultado.innerText = "Eu amo sorvete de chocolate!"
 
-    }
-    else if (comida == "flocos") {
+        }
+        else if (comida == "flocos") {
 
-        resultado.innerText = "Ahh, mas chocolate é o meu favorito..."
+            resultado.innerText = "Ahh, mas chocolate é o meu favorito..."
+
+        }
+        else {
+
+            resultado.innerText = "Ahh, eu esperava um sabor de sorvete..."
+
+        }
 
     }
     else {
 
-        resultado.innerText = "Ahh, eu esperava um sabor de sorvete..."
-
+        resultado.textContent = "Resultado..."
+        
     }
     
 })
