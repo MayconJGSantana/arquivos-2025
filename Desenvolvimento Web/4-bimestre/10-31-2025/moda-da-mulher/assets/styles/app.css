@@ -1,0 +1,33 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+
+@font-face {
+
+    font-family: 'Abel';
+    src: url('../fonts/abel/Abel-Regular.ttf');
+
+}
+
+:root {
+
+    --cor-primaria: #FFC107;
+    --cor-secundaria: #343A40;
+
+}
+
+.bg-cor-primaria {
+
+    background-color: var(--cor-primaria);
+
+}
+
+.bg-cor-secundaria {
+
+    background-color: var(--cor-secundaria);
+
+}
+
+body {
+
+    font-family: 'Abel', Arial, sans-serif;
+
+}
