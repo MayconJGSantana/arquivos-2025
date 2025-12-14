@@ -1,0 +1,4 @@
+
+Fazemos a persistência de dados com o fim de armazenar as diversas entradas de dados no programa. Vê-se a necessidade desse processo, pois, ao desligar o computador, os dados, guardados normalmente na memória RAM, sumirão - volátil. Nesse viés, implementamos eles em memória como o hdd e ssd por meio das tabelas salvas; elas provêm segurança dos dados e a manipulação de transações.
+
+A conexão entre a aplicação e o banco de dados parte de uma classe, presente em uma pasta Util, chamada de Connection. Nela implemetar-se-á um método que cria um objeto PDO, outra classe, já declarada pelo PHP, controladora de uma conexão. Esse novo objeto conterá em seu construtor: (<caminhoServidor>, <nomeDatabase>, <usuario>, <senha>, <opções>). No fim, 

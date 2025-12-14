@@ -1,0 +1,19 @@
+/* SEARCH FORM */
+.search-form {
+
+    .form-control {
+        padding-right: 45px !important;
+    }
+    .btn {
+        display: block;
+        position: absolute;
+        right: 8px;
+        top: 2px;
+        z-index: 10;
+    }
+}
+
+/* SEE MORE SECTION */
+.see-more-section {
+    background-color: var(--cor-terciaria);
+}
