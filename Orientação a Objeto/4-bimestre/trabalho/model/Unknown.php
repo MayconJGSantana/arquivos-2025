@@ -2,7 +2,7 @@
 
 require_once("Person.php");
 
-class Unknown implements Person {
+class Unknown extends Person {
 
     
 }

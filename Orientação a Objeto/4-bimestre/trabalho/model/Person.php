@@ -11,7 +11,17 @@ abstract class Person {
 
 
 
-    public abstract function __toString();
+    public function __toString()
+    {
+        $datas = "Id: " . $this -> getId() . " | ";
+        $datas .= "Cidade de nascimento: " . $this -> getBirthCity() . " | ";
+        $datas .= "Data de nascimento: " . $this -> getBirthDate() . " | ";
+        $datas .= "Altura: " . $this -> getHeight() . " | ";
+        $datas = "Nome: " . $this -> getWholeName() . " | ";
+        $datas .= "Intimidade: " . $this -> getIntimacy();
+
+        return $datas;
+    }
 
 
     /**

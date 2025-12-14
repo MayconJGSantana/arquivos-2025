@@ -27,11 +27,8 @@ class Friend extends Person {
 
     public function __toString()
     {
-        $datas = "Id: " . $this -> getId();
-        $datas .= " | Cidade de nascimento: " . $this -> getBirthCity();
-        $datas .= " | " . $this -> getBirthDate();
-        $datas .= " | " . $this -> getHeight();
-        $datas .= " | " . $this -> getIntimacy();
+        $datas = parent::__toString();
+
         $datas .= " | " . $this -> getQuality();
 
         return $datas;

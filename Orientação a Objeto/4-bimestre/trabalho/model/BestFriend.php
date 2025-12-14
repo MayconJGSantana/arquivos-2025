@@ -62,4 +62,15 @@ class BestFriend extends Friend {
         return $this;
     }
 
+    public function __toString()
+    {
+        $datas = parent::__toString() . " | ";
+
+        $datas .= "Cor favorita: " . $this -> getFavoriteColor() . " | ";
+        $datas .= "Comida favorita: " . $this -> getFavoriteFood() . " | ";
+        $datas .= "Sonho da vida: " . $this -> getLifeDream();
+
+        return $datas;
+    }
+
 }
