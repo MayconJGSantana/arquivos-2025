@@ -1,0 +1,19 @@
+/* CUSTOM PRODUCT CARD */
+.product-card {
+    .card-body {
+        padding: 15px 0;
+        margin-bottom: 5px;
+    }
+
+    .card-rate {
+        color: var(--cor-primaria);
+        margin-bottom: 5px;
+    }
+    .card-price {
+        font-size: 20px;
+    }
+}
+
+.product-details-img img {
+    max-width: 100%;
+}

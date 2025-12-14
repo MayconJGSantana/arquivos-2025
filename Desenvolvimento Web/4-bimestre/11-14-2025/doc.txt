@@ -1,0 +1,11 @@
+https://www.youtube.com/watch?v=79JA9_Z4juY&list=PLMy95_4XE08MT1Af0gtvH-vI8D95exF0y&index=4
+
+https://favicon.io/favicon-converter/
+
+https://dummyimage.com/
+
+chore: setup inicial do projeto
+
+Git
+
+git checkout -b developer -> criar e mudar de branch

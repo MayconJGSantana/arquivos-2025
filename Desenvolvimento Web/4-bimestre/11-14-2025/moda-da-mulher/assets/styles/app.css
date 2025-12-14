@@ -1,0 +1,116 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+
+@font-face {
+  font-family: 'Abel'; /* Escolha um nome para a sua fonte */
+  src: url('../fonts/abel/Abel-Regular.ttf'); /* Especifique o caminho do arquivo .ttf */
+}
+
+:root {
+    --cor-primaria: #FFC107;
+    --cor-secundaria: #343A40;
+    --cor-terciaria: #FF0F9A;
+    --cor-quartiaria: #FFF;
+
+}
+
+/* COLORS */
+.bg-cor-primaria{
+    background-color: var(--cor-primaria);
+}
+
+.bg-cor-secundaria{
+    background-color: var(--cor-secundaria);
+}
+
+body {
+    font-family: 'Abel', Arial, sans-serif;
+    color: var(--cor-secundaria); ;
+}
+
+.header {
+    background-color: var(--cor-primaria);
+}
+
+.navbar {
+    padding: 0;
+
+    a.nav-link {
+        padding: 18px 20px !important;
+    }
+
+    a.nav-link:hover {
+        background-color: #41464a;
+    }
+
+    .dropdown-menu {
+        background-color: var(--cor-secundaria);
+        color: var(--cor-quartiaria);
+        border-radius: 0;
+        border-top: solid 8px var(--cor-primaria);
+        top: 58px;
+
+        a {
+            padding: 12px;
+            color: var(--cor-quartiaria);
+        }
+
+        a:hover {
+            background-color: #41464a;
+            color: var(--cor-quartiaria);
+        }
+    }
+
+    
+}
+
+/* CUSTOM BUTTON */
+
+.btn-outline-primary {
+    border-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--cor-primaria);
+    border-color: var(--cor-primaria)
+}
+
+.btn-outline-quartiaria {
+    border-color: var(--cor-quartiaria);
+    color: var(--cor-quartiaria);
+}
+
+.btn-outline-quartiaria:hover {
+    background-color: var(--cor-quartiaria);
+    border-color: var(--cor-quartiaria)
+}
+
+/* FOOTER */
+
+
+footer {
+    background-color: var(--cor-secundaria);
+    color: #fff;
+
+    h5 {
+        font-size: 20px;
+        color: var(--cor-primaria);
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+    }    
+}
+
+.resumido {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* coloca "..." */
+}
