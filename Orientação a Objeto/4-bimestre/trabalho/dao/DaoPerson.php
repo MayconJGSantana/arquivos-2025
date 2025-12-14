@@ -4,7 +4,7 @@ require_once("util/Connection.php");
 
 class DaoFriend {
 
-    public function listFriends() {
+    public function listPersons() {
 
         $connection = Connection::getConnection();
 
@@ -16,30 +16,44 @@ class DaoFriend {
 
         // Turn data into friend instance
 
-        $datasFriends = array();
+        $personObjects = array();
 
         foreach ($datas as $data) {
 
-            $friend = new Friend();
+            if ($data['intimacy']) {
 
-            $friend -> setId($data['id'])
-                    -> setBirthCity($data['birth_city'])
-                    -> setBirthDate($data['birth_date'])
-                    -> setHeight($data['height'])
-                    -> setQuality($data['quality'])
-                    -> setWholeName($data['whole_name']);
+                $personObject = new Person();
 
-            array_push($datasFriends, $friend);
+            }
+            else if ($data['intimacy'] < 9) {
+
+
+                $personObject = new Friend();
+                $personObject -> setQuality(readline("Qualidade: "));
+
+            }
+            else {
+
+                $personObject = new BestFriend();
+                
+                $personObject -> setFavoriteColor(readline("Cor favorita: "))
+                        -> setFavoriteFood(readline("Comida favorita: "))
+                        -> setLifeDream(readline("Sonho de vida: "));
+
+            }
+
+            array_push($personObjects, $personObject);
+
         }
 
-        return $datasFriends;
+        return $personObjects;
     }
 
     public function savePerson(Person $person) {
 
         $connection = Connection::getConnection();
 
-        if ($person instanceof Person) {
+        if ($person instanceof Unknown) {
 
             $statement = $connection -> prepare("INSERT INTO friend (birth_city, birth_date, height, intimacy, whole_name) VALUES (?, ?, ?, ?)");
 
@@ -55,31 +69,31 @@ class DaoFriend {
         }
         else if ($person instanceof BestFriend) {
 
-            $statement = $connection -> prepare("INSERT INTO friend (birth_city, birth_date, favorite_color, favorite_food, height, intimacy, quality, whole_name) VALUES (?, ?, ?, ?, ?)");
+            $statement = $connection -> prepare("INSERT INTO friend (birth_city, birth_date, favorite_color, favorite_food, height, intimacy, life_dream, whole_name) VALUES (?, ?, ?, ?, ?)");
 
-            $statement -> execute([$person -> getBirthCity(), $person -> getBirthDate(), $person -> getFavoriteColor(), $person -> getFavoriteFood(), $person -> getHeight(), $person -> getIntimacy(), $person -> getQuality(), $person -> getWholeName()]);
+            $statement -> execute([$person -> getBirthCity(), $person -> getBirthDate(), $person -> getFavoriteColor(), $person -> getFavoriteFood(), $person -> getHeight(), $person -> getIntimacy(), $person -> getLifeDream(), $person -> getWholeName()]);
 
         }
 
     }
     
-    public function deleteFriend($idFriend) {
+    public function deletePerson($personId) {
 
         $connection = Connection::getConnection();
 
         $statement = $connection -> prepare("DELETE FROM person WHERE id = ?");
 
-        $statement -> execute([$idFriend]);
+        $statement -> execute([$personId]);
 
     }
 
-    public function findFriendById($idFriend) {
+    public function findPersonById($personId) {
 
         $connection = Connection::getConnection();
 
         $statement = $connection -> prepare("SELECT * FROM person WHERE id = ?");
 
-        $statement -> execute([$idFriend]);
+        $statement -> execute([$personId]);
 
         $data = $statement -> fetchAll();
 
@@ -103,8 +117,7 @@ class DaoFriend {
 
             $person = new BestFriend();
             
-            $person -> setQuality(readline("Qualidade: "))
-                    -> setFavoriteColor(readline("Cor favorita: "))
+            $person -> setFavoriteColor(readline("Cor favorita: "))
                     -> setFavoriteFood(readline("Comida favorita: "))
                     -> setLifeDream(readline("Sonho de vida: "));
 
@@ -115,7 +128,7 @@ class DaoFriend {
                 -> setHeight(readline("Altura: "))
                 -> setWholeName(readline("Nome: "));
         
-        return $friend;
+        return $person;
     }
     
 }

@@ -3,7 +3,7 @@
 require_once("model/Friend.php");
 require_once("model/Person.php");
 require_once("model/BestFriend.php");
-require_once("dao/DaoFriend.php");
+require_once("dao/DaoPerson.php");
 require_once("util/Connection.php");
 
 function createPerson() {
@@ -26,8 +26,7 @@ function createPerson() {
 
         $person = new BestFriend();
         
-        $person -> setQuality(readline("Qualidade: "))
-                -> setFavoriteColor(readline("Cor favorita: "))
+        $person -> setFavoriteColor(readline("Cor favorita: "))
                 -> setFavoriteFood(readline("Comida favorita: "))
                 -> setLifeDream(readline("Sonho de vida: "));
 
@@ -59,33 +58,33 @@ switch ($choice) {
 
         $person = createPerson();
         $dao = new DaoFriend();
-        $dao -> createFriend($friend -> getBirthCity(), $friend -> getBirthDate(), $friend -> getHeight(), $friend -> getQuality(), $friend -> getWholeName());
+        $dao -> savePerson($person);
         break;
 
     case 2:
 
         $dao = new DaoFriend();
-        $friends = $dao -> listFriends();
+        $persons = $dao -> listPersons();
 
-        var_dump($friends);
-        foreach($friends as $friend) {
+        var_dump($persons);
+        foreach($persons as $person) {
 
-            print($friend . "\n");
+            print($person . "\n");
 
         }
 
     case 3:
 
         $dao = new DaoFriend();
-        $friend = $dao -> findFriendById(readline("Id: "));
+        $person = $dao -> findPersonById(readline("Id: "));
 
-        print($friend);
+        print($person);
         break;
 
     case 4:
 
         $dao = new DaoFriend();
-        $dao -> deleteFriend(readline("Id: "));
+        $dao -> deletePerson(readline("Id: "));
         break;
 
 }
