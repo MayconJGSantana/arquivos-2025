@@ -20,27 +20,35 @@ class DaoFriend {
 
         foreach ($datas as $data) {
 
+
             if ($data['intimacy']) {
 
-                $personObject = new Person();
+                $personObject = new Unknown();
 
             }
             else if ($data['intimacy'] < 9) {
 
 
                 $personObject = new Friend();
-                $personObject -> setQuality(readline("Qualidade: "));
+                $personObject -> setQuality($data["quality"]);
 
             }
             else {
 
                 $personObject = new BestFriend();
                 
-                $personObject -> setFavoriteColor(readline("Cor favorita: "))
-                        -> setFavoriteFood(readline("Comida favorita: "))
-                        -> setLifeDream(readline("Sonho de vida: "));
+                $personObject -> setFavoriteColor($data["favorite_color"])
+                        -> setFavoriteFood($data["favorite_food"])
+                        -> setLifeDream($data["life_dream"]);
 
             }
+
+            $personObject -> setBirthCity($data["birth_city"])
+                    -> setBirthDate($data["birth_date"])
+                    -> setId($data["id"])
+                    -> setIntimacy($data["intimacy"])
+                    -> setHeight($data["height"])
+                    -> setWholeName($data["whole_name"]);
 
             array_push($personObjects, $personObject);
 
@@ -55,21 +63,21 @@ class DaoFriend {
 
         if ($person instanceof Unknown) {
 
-            $statement = $connection -> prepare("INSERT INTO friend (birth_city, birth_date, height, intimacy, whole_name) VALUES (?, ?, ?, ?)");
+            $statement = $connection -> prepare("INSERT INTO person (birth_city, birth_date, height, intimacy, whole_name) VALUES (?, ?, ?, ?, ?)");
 
             $statement -> execute([$person -> getBirthCity(), $person -> getBirthDate(), $person -> getHeight(), $person -> getIntimacy(), $person -> getWholeName()]);
 
         }
         else if ($person instanceof Friend) {
 
-            $statement = $connection -> prepare("INSERT INTO friend (birth_city, birth_date, height, intimacy, quality, whole_name) VALUES (?, ?, ?, ?, ?)");
+            $statement = $connection -> prepare("INSERT INTO person (birth_city, birth_date, height, intimacy, quality, whole_name) VALUES (?, ?, ?, ?, ?)");
 
             $statement -> execute([$person -> getBirthCity(), $person -> getBirthDate(), $person -> getHeight(), $person -> getQuality(), $person -> getIntimacy(), $person -> getWholeName()]);
 
         }
         else if ($person instanceof BestFriend) {
 
-            $statement = $connection -> prepare("INSERT INTO friend (birth_city, birth_date, favorite_color, favorite_food, height, intimacy, life_dream, whole_name) VALUES (?, ?, ?, ?, ?)");
+            $statement = $connection -> prepare("INSERT INTO person (birth_city, birth_date, favorite_color, favorite_food, height, intimacy, life_dream, whole_name) VALUES (?, ?, ?, ?, ?)");
 
             $statement -> execute([$person -> getBirthCity(), $person -> getBirthDate(), $person -> getFavoriteColor(), $person -> getFavoriteFood(), $person -> getHeight(), $person -> getIntimacy(), $person -> getLifeDream(), $person -> getWholeName()]);
 
@@ -103,30 +111,32 @@ class DaoFriend {
 
         if ($data['intimacy']) {
 
-            $person = new Person();
+            $person = new Unknown();
 
         }
         else if ($data['intimacy'] < 9) {
 
 
             $person = new Friend();
-            $person -> setQuality(readline("Qualidade: "));
+            $person -> setQuality($data["quality"]);
 
         }
         else {
 
             $person = new BestFriend();
             
-            $person -> setFavoriteColor(readline("Cor favorita: "))
-                    -> setFavoriteFood(readline("Comida favorita: "))
-                    -> setLifeDream(readline("Sonho de vida: "));
+            $person -> setFavoriteColor($data["favorite_color"])
+                    -> setFavoriteFood($data["favorite_food"])
+                    -> setLifeDream($data["life_dream"]);
 
         }
 
-        $person -> setBirthCity(readline("Cidade: "))
-                -> setBirthDate(readline("Data: "))
-                -> setHeight(readline("Altura: "))
-                -> setWholeName(readline("Nome: "));
+        $person -> setBirthCity($data["birth_city"])
+                -> setBirthDate($data["birth_date"])
+                -> setId($data["id"])
+                -> setIntimacy($data["intimacy"])
+                -> setHeight($data["height"])
+                -> setWholeName($data["whole_name"]);
         
         return $person;
     }

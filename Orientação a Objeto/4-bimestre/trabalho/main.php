@@ -1,7 +1,7 @@
 <?php
 
 require_once("model/Friend.php");
-require_once("model/Person.php");
+require_once("model/Unknown.php");
 require_once("model/BestFriend.php");
 require_once("dao/DaoPerson.php");
 require_once("util/Connection.php");
@@ -12,7 +12,7 @@ function createPerson() {
 
     if ($intimacy < 5) {
 
-        $person = new Person();
+        $person = new Unknown();
 
     }
     else if ($intimacy < 9) {
@@ -34,6 +34,7 @@ function createPerson() {
 
     $person -> setBirthCity(readline("Cidade: "))
             -> setBirthDate(readline("Data: "))
+            -> setIntimacy($intimacy)
             -> setHeight(readline("Altura: "))
             -> setWholeName(readline("Nome: "));
 
@@ -42,12 +43,6 @@ function createPerson() {
 }
 
 $options = ["Inserir", "Listar", "Buscar", "Excluir"];
-
-
-var_dump(date('l'));
-
-
-        $connection = Connection::getConnection();
 
 $choice = readline("Escolha: ");
 
@@ -72,6 +67,8 @@ switch ($choice) {
             print($person . "\n");
 
         }
+
+        break;
 
     case 3:
 

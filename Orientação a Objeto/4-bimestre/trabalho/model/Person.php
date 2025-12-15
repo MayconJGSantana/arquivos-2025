@@ -17,7 +17,7 @@ abstract class Person {
         $datas .= "Cidade de nascimento: " . $this -> getBirthCity() . " | ";
         $datas .= "Data de nascimento: " . $this -> getBirthDate() . " | ";
         $datas .= "Altura: " . $this -> getHeight() . " | ";
-        $datas = "Nome: " . $this -> getWholeName() . " | ";
+        $datas .= "Nome: " . $this -> getWholeName() . " | ";
         $datas .= "Intimidade: " . $this -> getIntimacy();
 
         return $datas;
